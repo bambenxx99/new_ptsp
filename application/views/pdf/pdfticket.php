@@ -1,9 +1,9 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <title><?= $title_pdf;?></title>
-   <style type="text/css">
+   <!-- <style type="text/css">
       @page {
         margin: 0;
       }
@@ -20,7 +20,7 @@
       .first-page + * {
         page-break-before: always;
       }
-    </style>
+    </style> -->
     </head>
     <body>
         <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
@@ -159,6 +159,7 @@
                 <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
                 <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">(........................)</p>
             </td>
+
             <td style="width:152.1pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
                 <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
             </td>
@@ -169,7 +170,7 @@
                 <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
                 <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
                 <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Rosiana Aprilia</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Admin  
             </td>
         </tr>
         <tr>
@@ -178,91 +179,11 @@
                 </p>
             </td>
         </tr>
-
-        <?php $i++; ?>
+            <?php $i++; ?>
         <?php endforeach ?>
+        
     </table>
 </body>
 <p style="margin-top:0pt; margin-bottom:8pt;">&nbsp;</p>
 
-</html> -->
-
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?= $title_pdf;?></title>
-        <style>
-            #table {
-                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-                border-collapse: collapse;
-                width: 100%;
-            }
-
-            #table td, #table th {
-                border: 1px solid #ddd;
-                padding: 8px;
-            }
-
-            #table tr:nth-child(even){background-color: #f2f2f2;}
-
-            #table tr:hover {background-color: #ddd;}
-
-            #table th {
-                padding-top: 10px;
-                padding-bottom: 10px;
-                text-align: left;
-                background-color: #4CAF50;
-                color: white;
-            }
-        </style>
-    </head>
-    <body>
-        <div style="text-align:center">
-            <h3> Laporan PDF Toko Kita</h3>
-        </div>
-        <table id="table">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Nama Produk</th>
-                    <th>Harga Jual</th>
-                    <th>Terjual</th>
-                    <th>Tanggal Transaksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td scope="row">1</td>
-                    <td>Kacang Goreng</td>
-                    <td>Rp5.000,-</td>
-                    <td>1</td>
-                    <td>25 Oktober 2020, 17:01:03</td>
-                </tr>
-                <tr>
-                    <td scope="row">2</td>
-                    <td>Kopi Hitam</td>
-                    <td>Rp5.000,-</td>
-                    <td>1</td>
-                    <td>25 Oktober 2020, 16:01:03</td>
-                </tr>
-                <tr>
-                    <td scope="row">3</td>
-                    <td>Gorengan Bakwan</td>
-                    <td>Rp3.000,-</td>
-                    <td>3</td>
-                    <td>25 Oktober 2020, 15:01:02</td>
-                </tr>
-                <tr>
-                    <td scope="row">4</td>
-                    <td>Nasi uduk</td>
-                    <td>Rp14.000,-</td>
-                    <td>2</td>
-                    <td>25 Oktober 2020, 14:04:03</td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
 </html>

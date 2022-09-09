@@ -82,8 +82,7 @@
                 <div>
                     <?php foreach ($pesan_ticket as $pesan) : ?>
                         <!-- <?php var_dump($pesan); ?> -->
-                        <input name="pesan_ticket" type="text" placeholder="<?= $pesan['pesan']; ?>" class="form-control form-control-sm" rows="3">
-                        <textarea name="pesan_ticket" class="form-control form-control-sm" id="pesan_ticket" placeholder=<?= $pesan['pesan']; ?>></textarea>
+                        <textarea name="pesan_ticket" class="form-control form-control-sm" id="pesan_ticket"><?= $pesan['pesan']; ?></textarea>
                 </div> <?php endforeach ?>
             </div>
             <div class="modal-footer">

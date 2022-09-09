@@ -215,15 +215,9 @@ class Ticket extends CI_Controller
         $this->load->library('pdf');
         $data['dataku'] = $this->M_Ticket->load_ticket($kodeticket);
         $file_pdf = 'TICKET';
-        $paper = 'A4';
-        $orientation = "portrait";
-        $this->load->view('pdf/pdfticket', $data, true);
+        $this->load->view('pdf/pdfticket', $data);
         
-		// $html = $this->load->view('laporan_pdf',$data, true);	    
-        
-        // run dompdf
-        $this->pdf->generate($html, $file_pdf,$paper,$orientation);
-        
+        $this->pdf->generate($html, $file_pdf);
 
     }
 

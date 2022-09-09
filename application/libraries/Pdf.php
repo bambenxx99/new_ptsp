@@ -9,13 +9,13 @@ class Pdf{
         $options->set('isRemoteEnabled', TRUE);
         $dompdf = new Dompdf($options);
         $dompdf->loadHtml($html);
-        $dompdf->setPaper($paper, $orientation);
+        $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
-        ob_end_clean(); 
         if ($stream) {
-            $dompdf->stream($filename.".pdf", array("Attachment" => 0));
+            $dompdf->stream($filename.".pdf", array("Attachment" => FALSE));
         } else {
             return $dompdf->output();
         }
+        // ini_set('display_errors',true);
     }
 }
