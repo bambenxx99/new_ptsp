@@ -1,0 +1,584 @@
+<!-- End of Topbar -->
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+
+    <form method="post" action="./self_reg_pendamping_view" id="form1">
+        <div class="aspNetHidden">
+
+
+
+
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['form1'];
+            if (!theForm) {
+                theForm = document.form1;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+//]]>
+        </script>
+
+
+        <script
+            src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZLQvDoGwThLJkZr1QbjN8PEr_D6Fw4qIT3gwm-ikUAqq1TFUdICirInZusJhFvxyXA2&amp;t=636726176526079030"
+            type="text/javascript"></script>
+
+
+        <script
+            src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvjatAy_oNbaCi-D9UTZE2D9eLGhqBVHpXr5qMhccMerySNKxT5IJXRRWyyUnV0I2k3eIdFNrCjIv5BmGMCDcMJ3Vyntl6CRY4gdizwQ1Da_SuiUwN6pYEz308st0YcjyPVJNqYWXYg6Z73-5nEehP3c1&amp;t=ffffffffacced670"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8ONN2KqovW9NAkIA_q2DfqFe0OX4yX0vPEv2CEfFXRB8gt_avHXdjyv-PYsJgBCHJytQl4KlZvLVETlgJ_z7fnnkQ60WWwoUiS2g3fQUDBpeXb4Vc31oR7ZobSFhgVVvAlOMURfVZpTWbfSvi9OEUzYc1&amp;t=ffffffffacced670"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=eE6V8nDbUVn0gtG6hKNX_JEPaxuvIhAhJsBtPM2MfChYwYTfn1PrRuRTjeEG1NPJIfQvzXd75WhAUs6id4umMBQKTRCuGRi0Qjae3cjb355AXaXTtOZwrKkF7nWaa8gM0&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=mcAASOSteirJeuV-3by3UbJui5XnjkZaR1mjivXvYV277EbXrTRH8KpFh6khFocwXMDREzKPGKxiJY848-AEP3VRGFwy-6lH3vJHiuKSD0o1&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=jwf4VSQi7LeShc44FJ-gAcMT1ifLIBhskbN7IoZtagEnwUwQOLhS1v_ac-qCtVC9uzUusTsLoDx3dzv58t_VZoBSLw0Qb1hMrPWV4uh4RLelUA16IEphecGfHZZwiTza0&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=nai7mGcYyE2dix_TwveLDY9_QzM80BpipOCUCLqzW87luI6DasGFxLD_nyyhcwtyFmL783SuYJC9suwrAyFlNEwcufIhmtJQMoIfAfOHudr0xSldLjzMhUJ_E40G6Ov70&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=HEFpVKbnoeQjkjHkFKu3MB1Tm8s889zZ2zvEzuWqugNlZA1bHXcsDXzuAQs3YCNSWzDoU3FZY5KpErQwf1XkmE8wLdAM5j-dqAOJtumwKjpi4-DK3FtXMQMjy7It5usd0&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=k9W6WtsgU2g6TbhWgWI8JX4-8zuB4osOqTB8YmlBZe4110b6-s3LQFjpSq3PlZv9nqkriMAuyKKB80PjQGNqLxrsl8FDTmeV4gHlvQXtSwlc-RaKyOzDi2WG9c145KD00&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=HdoSyj8kf2_mMLr0r0SEileEJFPJH6CgDHpfHB6ixgMj6wPI-Mbaq3RKbwLT70xGaFWZ_Aal1VtYWNsw6eX-GGj1mNiT7ayQ-uRjO2Jo5aKBURKDJBQT_u0V0YkJ9cZA0&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=uiErWUqGhD5_ddnGX4Xq_g_r-yQ0T_kfIIpaUFo7FaCu83Prt934nJoDjbOkpEkaeLTQkTrp0vTxhxWwf81V8YuJKWT3zo1XJhbixZIl34pzbVGMbKzAbbbxxU5VXa_V0&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=LQ1q2RBSthBAZhliMjtG_8rbh3bDDfjup5EvjwAyyiWYdACfQbjtBOjVN5HqOKz3wYu6FO3c41yDG8RJA0XxlT_gTufbJcTkEU0FjiipqZHIaLrZHmsjCdwnE912Si2v0&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=VOYD8Xe7kQA0lniBYXVpAuh2It4I1wA8W9lpcnrFCfK4Qy2DNJWW2VkCa_s_YZzrrG5MQTh9KOTMf9hoLwDJ5RVRcZUekYXNU7WyXcypK-Udyqdn24hGXPEna31FjgO_0&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=24039AtbfhsNBYQDFUMYHJ37RYR8WTHCLVy2JTTNqEXOiGidkK5FdIuKeaia_uaq_cI5LBJLipOvYRjzukmMYzjiNQlJlLOQrYgHcoAnwpU1&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=myBlz7mQmGQE80F8-WeLsZYdTiFIVUe8q3d3uJLnQy_-wOflszUJ9SckZ7r-1UFczfm38WEfqswT23LNxOmutjmiSVKBCSuFYXp0DOJsYbseVjEz1asxi8NiZEk_KKf-0&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <script
+            src="/ScriptResource.axd?d=NISXSzp87hD3qcCkP6NEPqNjPa4a5RSMRrV28KUPIb4e_RKCrMtIm3YoM3JPg9FQ6kzGlwx8mpkxoNm-JEY0PoDtQW01IQnb8ttN58LTRpMun1LckPco3KZpq4s04-490&amp;t=ffffffffb56adc1f"
+            type="text/javascript"></script>
+        <div class="aspNetHidden">
+
+
+
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptManager1', 'form1', ['tctl00$ContentPlaceHolder1$UpdatePanel1', 'ContentPlaceHolder1_UpdatePanel1'], [], [], 90, 'ctl00');
+//]]>
+        </script>
+
+
+        <link href="css/sb-admin-21.css" rel="stylesheet">
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="css/timeline.css" rel="stylesheet">
+        <div id="ContentPlaceHolder1_UpdatePanel1">
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$HiddenField1" id="ContentPlaceHolder1_HiddenField1"
+                value="ee8a0343-c3f1-4522-99ed-3e56cf305b36">
+
+
+
+            <div class="mb-2">
+                <input name="ctl00$ContentPlaceHolder1$btnAjukan" type="button" id="ContentPlaceHolder1_btnAjukan"
+                    onclick="bukaModal();" class="btn btn-primary btn-sm" value=" Kirim " disabled="disabled">
+
+
+                <input type="hidden" name="ctl00$ContentPlaceHolder1$setuju" id="setuju">
+                &nbsp;
+                <span>
+                    <span id="ContentPlaceHolder1_lblPesan" class="text-danger"></span></span>
+            </div>
+            <div class="row">
+                <div class="col-xl-8 col-md-8 mb-4">
+                    <div class="card shadow mb-2">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Tenaga Pendamping</h6>
+                        </div>
+                        <fieldset id="ContentPlaceHolder1_fData">
+                            <div class="card-body">
+                                <div class="row mb-2">
+                                    <div class="col-md-3 col-xl-3 font-weight-bold col-form-label">NIK</div>
+                                    <div class="col-md-6 col-xl-6 ">
+                                        <input name="ctl00$ContentPlaceHolder1$lblNIK" type="text"
+                                            id="ContentPlaceHolder1_lblNIK" class="form-control form-control-sm ">
+                                    </div>
+
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-3 col-xl-3 font-weight-bold col-form-label ">Nama</div>
+                                    <div class="col-md-6 col-xl-6 ">
+                                        <input name="ctl00$ContentPlaceHolder1$lblNama" type="text"
+                                            value="Riza Ardiyanti" id="ContentPlaceHolder1_lblNama"
+                                            class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Alamat
+                                    </div>
+                                    <div class="col-md-12 col-xl-9  ">
+                                        <input name="ctl00$ContentPlaceHolder1$lblAlamat" type="text"
+                                            id="ContentPlaceHolder1_lblAlamat" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Provinsi
+                                    </div>
+                                    <div class="col-md-12 col-xl-9 ">
+                                        <select name="ctl00$ContentPlaceHolder1$ddlProvinsi"
+                                            onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlProvinsi\',\'\')', 0)"
+                                            id="ContentPlaceHolder1_ddlProvinsi" class="form-control form-control-sm">
+                                            <option value="">-- PILIH PROVINSI --</option>
+                                            <option value="51">Bali</option>
+                                            <option value="36">Banten</option>
+                                            <option selected="selected" value="34">DI Yogyakarta</option>
+                                            <option value="31">DKI Jakarta</option>
+                                            <option value="32">Jawa Barat</option>
+                                            <option value="33">Jawa Tengah</option>
+                                            <option value="35">Jawa Timur</option>
+                                            <option value="64">Kalimantan Timur</option>
+                                            <option value="19">Kepulauan Bangka Belitung</option>
+                                            <option value="14">Riau</option>
+                                            <option value="72">Sulawesi Tengah</option>
+                                            <option value="16">Sumatera Selatan</option>
+                                            <option value="12">Sumatera Utara</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Kab/Kota
+                                    </div>
+                                    <div class="col-md-12 col-xl-9 ">
+                                        <select name="ctl00$ContentPlaceHolder1$ddlKabupaten"
+                                            onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlKabupaten\',\'\')', 0)"
+                                            id="ContentPlaceHolder1_ddlKabupaten" class="form-control form-control-sm">
+                                            <option value="">-- PILIH KABUPATEN --</option>
+                                            <option value="3402">KAB. BANTUL</option>
+                                            <option value="3403">KAB. GUNUNGKIDUL</option>
+                                            <option selected="selected" value="3401">KAB. KULON PROGO</option>
+                                            <option value="3404">KAB. SLEMAN</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Kecamatan
+                                    </div>
+                                    <div class="col-md-12 col-xl-9 ">
+                                        <select name="ctl00$ContentPlaceHolder1$ddlKecamatan"
+                                            id="ContentPlaceHolder1_ddlKecamatan" class="form-control form-control-sm">
+                                            <option selected="selected" value="">-- PILIH KECAMATAN --</option>
+                                            <option value="340109">Kokap</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label  ">Kode Pos
+                                    </div>
+                                    <div class="col-md-12 col-xl-3 ">
+                                        <input name="ctl00$ContentPlaceHolder1$lblKodePos" type="text"
+                                            id="ContentPlaceHolder1_lblKodePos" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Tempat
+                                        Lahir</div>
+                                    <div class="col-md-12 col-xl-4 ">
+                                        <input name="ctl00$ContentPlaceHolder1$lblTempatLahir" type="text"
+                                            id="ContentPlaceHolder1_lblTempatLahir"
+                                            class="form-control form-control-sm">
+
+                                    </div>
+                                    <div class="col-md-12 col-xl-2 font-weight-bold col-form-label ">Tanggal
+                                        Lahir</div>
+                                    <div class="col-md-12 col-xl-3 ">
+                                        <input name="ctl00$ContentPlaceHolder1$lblTglLahir" type="text"
+                                            id="ContentPlaceHolder1_lblTglLahir" class="form-control form-control-sm">
+                                        <input type="hidden"
+                                            name="ctl00$ContentPlaceHolder1$MaskedEditExtender4_ClientState"
+                                            id="ContentPlaceHolder1_MaskedEditExtender4_ClientState">
+
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label  ">Email
+                                    </div>
+                                    <div class="col-md-12 col-xl-4 ">
+                                        <input name="ctl00$ContentPlaceHolder1$lblEmail" type="text"
+                                            id="ContentPlaceHolder1_lblEmail" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="col-md-12 col-xl-2 font-weight-bold col-form-label ">Telp/HP
+                                    </div>
+                                    <div class="col-md-12 col-xl-3 ">
+                                        <input name="ctl00$ContentPlaceHolder1$lblTelpon" type="text"
+                                            id="ContentPlaceHolder1_lblTelpon" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <h6 class="mt-4 mb-3"><span class="headline">Data Pendidikan</span></h6>
+                                <div class="row mb-2">
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Pendidikan
+                                        Terakhir</div>
+                                    <div class="col-md-12 col-xl-2 ">
+                                        <select name="ctl00$ContentPlaceHolder1$ddlPendidikan"
+                                            onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlPendidikan\',\'\')', 0)"
+                                            id="ContentPlaceHolder1_ddlPendidikan" class="form-control form-control-sm">
+                                            <option selected="selected" value="SD/MI">SD/MI</option>
+                                            <option value="SMP/MTS">SMP/MTS</option>
+                                            <option value="SMA/MA">SMA/MA</option>
+                                            <option value="D1/D2/D3">D1/D2/D3</option>
+                                            <option value="S1">S1</option>
+                                            <option value="S2">S2</option>
+                                            <option value="S3">S3</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Nama
+                                        Universitas</div>
+                                    <div class="col-md-12 col-xl-4 ">
+                                        <input name="ctl00$ContentPlaceHolder1$lblUniversitas" type="text"
+                                            id="ContentPlaceHolder1_lblUniversitas"
+                                            class="form-control  form-control-sm">
+                                    </div>
+                                </div>
+                                <h6 class="mt-4 mb-3"><span class="headline">Data Bank</span></h6>
+                                <div class="row mb-2">
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Bank</div>
+                                    <div class="col-md-12 col-xl-9 ">
+                                        <input name="ctl00$ContentPlaceHolder1$lblKodeBank" type="text"
+                                            id="ContentPlaceHolder1_lblKodeBank" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Nama
+                                        Rekening</div>
+                                    <div class="col-md-12 col-xl-4 ">
+                                        <input name="ctl00$ContentPlaceHolder1$tbNamaKer" type="text"
+                                            id="ContentPlaceHolder1_tbNamaKer" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="col-md-12 col-xl-2 font-weight-bold col-form-label ">No.
+                                        Rekening</div>
+                                    <div class="col-md-12 col-xl-3 ">
+                                        <input name="ctl00$ContentPlaceHolder1$lblNoRekening" type="text"
+                                            id="ContentPlaceHolder1_lblNoRekening" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <h6 class="mt-4 mb-3"><span class="headline">Lembaga Pendamping PPH</span></h6>
+                                <div class="row mb-2">
+                                    <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Nama
+                                        Lembaga Yang Dipilih</div>
+                                    <div class="col-md-12 col-xl-9 ">
+                                        <select name="ctl00$ContentPlaceHolder1$ddlLembagaPendamping"
+                                            id="ContentPlaceHolder1_ddlLembagaPendamping"
+                                            class="form-control form-control-sm">
+                                            <option selected="selected" value="">-- PILIH LEMBAGA --</option>
+                                            <option value="73376711-e2d2-4523-8e83-28d327de926e">UIN Sunan
+                                                Kalijaga Yogyakarta</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <h6 class="mt-4 mb-3"><span class="headline">Dokumen Persyaratan</span></h6>
+                                <table class="table table-responsive " width="100%" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <th width="30%">Dokumen</th>
+                                            <th width="5%"></th>
+                                            <th width="5%"></th>
+                                            <th width="60%">File</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span id="ContentPlaceHolder1_lblIJasah">Ijazah</span>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                <input type="file" name="ctl00$ContentPlaceHolder1$upFileIjazah"
+                                                    id="ContentPlaceHolder1_upFileIjazah">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span id="ContentPlaceHolder1_lblKTP">KTP</span>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                <input type="file" name="ctl00$ContentPlaceHolder1$upFileKTP"
+                                                    id="ContentPlaceHolder1_upFileKTP"> <span
+                                                    id="ContentPlaceHolder1_lblDomisili"><br><br> Jika domisili
+                                                    saat ini berbeda dengan domisili pada KTP, maka sertakan KTP
+                                                    berikut dengan Surat Keterangan Domisili yang minimal
+                                                    ditandatangani oleh RT dan RW setempat</span>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+                        <div class="card-footer text-right">
+
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnSimpan" value="Simpan"
+                                id="ContentPlaceHolder1_btnSimpan" class="btn btn-primary btn-sm ">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnCancel" value=" Batal "
+                                id="ContentPlaceHolder1_btnCancel" class="btn btn-secondary btn-sm ">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xl-4 col-md-4 mb-4">
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 ">
+                            <div class="card shadow mb-2">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Status Registrasi</h6>
+                                </div>
+                                <div class="card-body">
+                                    <fieldset id="ContentPlaceHolder1_fData2" disabled="disabled">
+                                        <div class="row mb-2">
+                                            <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">
+                                                Status</div>
+                                            <div class="col-md-6 col-xl-8 ">
+                                                <input name="ctl00$ContentPlaceHolder1$tbStatus" type="text"
+                                                    value="DRAFT" id="ContentPlaceHolder1_tbStatus"
+                                                    class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">No.
+                                                Registrasi</div>
+                                            <div class="col-md-6 col-xl-8 ">
+                                                <input name="ctl00$ContentPlaceHolder1$lblNoRegistrasi" type="text"
+                                                    value="-" id="ContentPlaceHolder1_lblNoRegistrasi"
+                                                    class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">Tgl.
+                                                Berlaku</div>
+                                            <div class="col-md-6 col-xl-8 ">
+                                                <input name="ctl00$ContentPlaceHolder1$lblTglBerlaku" type="text"
+                                                    value="-" id="ContentPlaceHolder1_lblTglBerlaku"
+                                                    class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 ">
+                            <div class="card shadow mb-2">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Pelatihan Pendamping</h6>
+                                </div>
+                                <div class="card-body">
+                                    <fieldset id="ContentPlaceHolder1_Fieldset1" disabled="disabled">
+                                        <div class="row mb-2">
+                                            <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">
+                                                Tanggal Pelatihan</div>
+                                            <div class="col-md-6 col-xl-8 ">
+                                                <input name="ctl00$ContentPlaceHolder1$tbTglPelatihan" type="text"
+                                                    id="ContentPlaceHolder1_tbTglPelatihan"
+                                                    class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">
+                                                Tanggal Berakhir</div>
+                                            <div class="col-md-6 col-xl-8 ">
+                                                <input name="ctl00$ContentPlaceHolder1$tbTglBerakhir" type="text"
+                                                    id="ContentPlaceHolder1_tbTglBerakhir"
+                                                    class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">
+                                                Nomor Sertifikat</div>
+                                            <div class="col-md-6 col-xl-8 ">
+                                                <input name="ctl00$ContentPlaceHolder1$tbNoSertifikat" type="text"
+                                                    id="ContentPlaceHolder1_tbNoSertifikat"
+                                                    class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card shadow mb-2">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Tracking</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <ul id="ContentPlaceHolder1_tabs" class="timeline">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModalTidakLengkap" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalHead">Persyaratan Tidak Lengkap</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label id="label2" class="pb-4">Dokumen persyaratan belum lengkap</label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class=" btn-secondary " data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModalSuccess" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Success</h5>
+                        <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label class="pb-4">Simpan Sukses </label>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnSukses" value="OK"
+                            id="ContentPlaceHolder1_btnSukses" class="btn-secondary btn-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalConfirm" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">HAPUS</h5>
+                        <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label class="pb-4">Yakin ingin menghapus? </label>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnYa" value="Ya"
+                            id="ContentPlaceHolder1_btnYa">
+                        <button type="button" class="btn-secondary btn-sm"
+                            onclick="window.location.href='/main'">Tidak</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="Ajukan" tabindex="-1" role="dialog" aria-labelledby="UpdateData" aria-hidden="true">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="UpdateData1">Pengajuan</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Ajukan
+                        <span id="ContentPlaceHolder1_lblNamaPendamping">Riza Ardiyanti</span>
+                        sebagai Pendamping?
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btbYa" value="Ya"
+                            id="ContentPlaceHolder1_btbYa" class="btn btn-primary btn-sm">
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnBatal2" value="Tidak"
+                            id="ContentPlaceHolder1_btnBatal2" class="btn btn-secondary btn-sm" data-dismiss="modal">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <script type="text/javascript">
+            //<![CDATA[
+            Sys.Application.add_init(function () {
+                $create(Sys.Extended.UI.MaskedEditBehavior, { "ClientStateFieldID": "ContentPlaceHolder1_MaskedEditExtender4_ClientState", "century": 2000, "cultureAMPMPlaceholder": "AM;PM", "cultureCurrencySymbolPlaceholder": "Rp", "cultureDateFormat": "DMY", "cultureDatePlaceholder": "/", "cultureDecimalPlaceholder": ",", "cultureName": "id-ID", "cultureThousandsPlaceholder": ".", "cultureTimePlaceholder": ".", "id": "ContentPlaceHolder1_MaskedEditExtender4", "mask": "99/99/9999", "maskType": 1 }, null, null, $get("ContentPlaceHolder1_lblTglLahir"));
+            });
+            Sys.Application.add_init(function () {
+                $create(Sys.Extended.UI.CalendarBehavior, { "format": "dd/MM/yyyy", "id": "ContentPlaceHolder1_CalendarExtender1" }, null, null, $get("ContentPlaceHolder1_lblTglLahir"));
+            });
+
+        </script>
+        <span style="display: none !important;"><input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS"
+                value=""></span><span style="display: none !important;"><input type="hidden" name="__EVENTTARGET"
+                id="__EVENTTARGET" value=""></span><span style="display: none !important;"><input type="hidden"
+                name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""></span><span
+            style="display: none !important;"><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="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"></span><span
+            style="display: none !important;"><input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR"
+                value="DA292652"></span><span style="display: none !important;"><input type="hidden"
+                name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                value="ptDBlm9jSvOGrF0lSpPBblRtgqeNC4LHBz2JaXgsSuxQ4LSryj8Ld2hHgE66gS+nrZW5Y9BH15YexIZ8f67Q8V50Cr8+fcuRhNK9wQRqCQZTPGPQveuxPv5F6Gbk9Y01l7FI8kjyYwbQGYgfZnHZdrdzI119eYO16235W7IU0lfQWx86FVmX984Guom3h09n3UCqDRlIbtNVvue9Gk/J2KQeXkVkxaeOFPTng8fSGaJfVGtiUjrURA5MtbskhIKYngZXXBCaGB5NmDNFyITTXEPBWhGT+FfDb0AitFpfq5QTnVrxJmuh+GOG4dKZxnSk7fSpW9YgQUeHxMtRC94/k3i8H+YA3K8YhlkTRBhQ9QJ0KcMxy0H+Y7GMg1BjPALwHyUkWBlc9SUS221B3qhzRS0Qs2ftWQBcGf5lLkdMrgPtwxMa1gN2V5SHQo8V/wmqzjlOue9VNDPC/VX3iqY2TKVvtEhGDbXae75xM4kROaQE+af3wpKVVnnteC4I1gDUZwlRVaXuNWdczXVOgSKFbvCD78W0V/Mx3mpJY3bLiy7O6YqfZZlsCCaT6eL9J68IKHla5oMhmDkqLlXCk6OY4mG6BNzigEGwPbhnMs15E8OTTFT6Vppz6JKsCSzIV8y3x8MBWQor8FlciWgeb/ysGPmC/SOtvL7YBfM+rDtE/ds6cIsKFLioC1LcjxsJ7TSIcVIm0S5pys8AKxIMMx5JowQDWvcjdu5b9vqNs4z/jqoKuWxMMTJpPGktgSNgBBSC/55LdXG8cykrL5JqMseOW5WTUM64MQQF7KMgZ+2mNQlV0eTJtwyrRK5zVUyZacsJ6Kn4sl7/ucxXgi3YsOYjwFEW51bmjAOGwjd7zk/0LTxlysVNyWvJB58fZPN+4yRbNgXrKzCFANtn9TkLOKE1r8izjkQYycYkKmxL/3bIhOZ0Jb6NeKrzPDm+afeP6L0ADSqbTJVw8Zn4JlAv9c5FDA+qmguXLn18uBJZmEH0/vntDkFhevC6MbNmeZ8QZPwpz3r4pcllQ/t8wGVpn4DeH/lksOlasgI/V+6Xi1jgEdxA8Q8o4sQPRYFaGlppP4K2Ex4hO2FA1wBpi6KJJWu9GX9c46PhDLjEZ5oDyiGTlhZFKtHxHe7Q9EkiJITmvFJUehjyEY7UNSCYf6lOFp6ApqN2e3Y2tqmkED+z0GQ1ts+3GOSjpevQ6hf/cY+0lAe6QsJvQqyoU33P4WNyJaisOru26oPCHBLsvx0buKrE+poEzfzNALngPFrvHoyQity3XR2VG+7FfjJBx9Yl8/2HTfYrINVQk0YAdWPj2bO7anwc4krm5lNZTfNHY8QQeXToiRxOtYqDn2v5XHhTRFCxbg=="></span>
+    </form>
+    <!-- Page Heading -->
+
+</div>
+<!-- /.container-fluid -->
