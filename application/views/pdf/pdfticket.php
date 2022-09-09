@@ -1,138 +1,268 @@
-<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
-    <tbody>
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title><?= $title_pdf;?></title>
+   <style type="text/css">
+      @page {
+        margin: 0;
+      }
+      .pages {
+        margin: .5in;
+      }
+      .first-page {
+        margin: 0in;
+        color: green;
+        height: 100%;
+        width: 100%;
+        position:absolute;
+      }
+      .first-page + * {
+        page-break-before: always;
+      }
+    </style>
+    </head>
+    <body>
+        <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
         <tr>
             <td style="width:95.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
                 <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
             </td>
             <td colspan="3" style="width:421.2pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:14pt;"><strong>KANTOR KEMENTERIAN AGAMA&nbsp;</strong></p>
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><strong>KABUPATEN KULON PROGO&nbsp;</strong></p>
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;">Jl. Bhayangkara Wates 55611 Telepon: (0274) 773086; Faksimili: (0274) 773087 Website: Kulonprogo.kemenag.go.id</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:14pt;"><strong>KANTOR
+                        KEMENTERIAN AGAMA&nbsp;</strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><strong>KABUPATEN KULON
+                        PROGO&nbsp;</strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;">Jl. Bhayangkara Wates
+                    55611 Telepon: (0274) 773086; Faksimili: (0274) 773087 Website: Kulonprogo.kemenag.go.id</p>
             </td>
         </tr>
         <tr>
             <td colspan="4" style="width:527.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;"><span style="height:0pt; display:block; position:absolute; z-index:0;"><img src="https://myfiles.space/user_files/129081_f4b7455f0dfa412a/1662105902_format-surat/1662105902_format-surat-1.png" alt="" width="710" height="6" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;"><span
+                        style="height:0pt; display:block; position:absolute; z-index:0;"><img
+                            src="https://myfiles.space/user_files/129081_f4b7455f0dfa412a/1662105902_format-surat/1662105902_format-surat-1.png"
+                            alt="" width="710" height="6" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
             </td>
         </tr>
         <?php $i = 1; ?>
         <?php foreach ($dataku as $data) : ?>
 
-            <tr>
-                <td colspan="4" style="width:527.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><strong>BUKTI TERIMA BERKAS PERMOHONAN</strong></p>
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:95.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">No. Ticket : </p>
-                </td>
-                <td style="width:152.1pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;"><?= $data['kode_ticket']; ?>&nbsp;</p>
-                </td>
-                <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Bagian :</p>
-                </td>
-                <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:95.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Nama :</p>
-                </td>
-                <td style="width:152.1pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;"><?= $data['nama']; ?>&nbsp;</p>
-                </td>
-                <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Waktu :</p>
-                </td>
-                <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:95.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">No. Telp :</p>
-                </td>
-                <td style="width:152.1pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;"><?= $data['nomorhp']; ?>&nbsp;</p>
-                </td>
-                <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-                <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:95.3pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-                <td style="width:152.1pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-                <td style="width:123.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-                <td style="width:123.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4" style="width:527.3pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">**** Layanan</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4" style="width:527.3pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Detail Layanan</p>
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:95.3pt; border-top-style:solid; border-top-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">******* Layanan</p>
-                </td>
-                <td style="width:152.1pt; border-top-style:solid; border-top-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-                <td style="width:123.75pt; border-top-style:solid; border-top-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-                <td style="width:123.75pt; border-top-style:solid; border-top-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">******* Penerima</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:95.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">(........................)</p>
-                </td>
-                <td style="width:152.1pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-                <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                </td>
-                <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Rosiana Aprilia</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4" style="width:527.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:9pt;">*) Harap di bawa pada ***** pengambilan berkas</p>
-                </td>
-            </tr>
+        <tr>
+            <td colspan="4" style="width:527.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><strong>BUKTI TERIMA
+                        BERKAS PERMOHONAN</strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:95.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">No. Ticket : </p>
+            </td>
+            <td style="width:152.1pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">
+                    <?= $data['kode_ticket']; ?>&nbsp;
+                </p>
+            </td>
+            <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Bagian :</p>
+            </td>
+            <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:95.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Nama :</p>
+            </td>
+            <td style="width:152.1pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">
+                    <?= $data['nama']; ?>&nbsp;
+                </p>
+            </td>
+            <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Waktu :</p>
+            </td>
+            <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:95.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">No. Telp :</p>
+            </td>
+            <td style="width:152.1pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">
+                    <?= $data['nomorhp']; ?>&nbsp;
+                </p>
+            </td>
+            <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+            <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td
+                style="width:95.3pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+            <td
+                style="width:152.1pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+            <td
+                style="width:123.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+            <td
+                style="width:123.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"
+                style="width:527.3pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Layanan</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"
+                style="width:527.3pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Detail Layanan</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td
+                style="width:95.3pt; border-top-style:solid; border-top-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;"> Layanan</p>
+            </td>
+            <td
+                style="width:152.1pt; border-top-style:solid; border-top-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+            <td
+                style="width:123.75pt; border-top-style:solid; border-top-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+            <td
+                style="width:123.75pt; border-top-style:solid; border-top-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;"> Penerima</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:95.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">(........................)</p>
+            </td>
+            <td style="width:152.1pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+            <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+            </td>
+            <td style="width:123.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">Rosiana Aprilia</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="width:527.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:9pt;">*) Harap di bawa pada pengambilan berkas
+                </p>
+            </td>
+        </tr>
 
-            <?php $i++; ?>
+        <?php $i++; ?>
         <?php endforeach ?>
-    </tbody>
-</table>
+    </table>
+</body>
 <p style="margin-top:0pt; margin-bottom:8pt;">&nbsp;</p>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><?= $title_pdf;?></title>
+        <style>
+            #table {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #table td, #table th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #table tr:nth-child(even){background-color: #f2f2f2;}
+
+            #table tr:hover {background-color: #ddd;}
+
+            #table th {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align:center">
+            <h3> Laporan PDF Toko Kita</h3>
+        </div>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama Produk</th>
+                    <th>Harga Jual</th>
+                    <th>Terjual</th>
+                    <th>Tanggal Transaksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>Kacang Goreng</td>
+                    <td>Rp5.000,-</td>
+                    <td>1</td>
+                    <td>25 Oktober 2020, 17:01:03</td>
+                </tr>
+                <tr>
+                    <td scope="row">2</td>
+                    <td>Kopi Hitam</td>
+                    <td>Rp5.000,-</td>
+                    <td>1</td>
+                    <td>25 Oktober 2020, 16:01:03</td>
+                </tr>
+                <tr>
+                    <td scope="row">3</td>
+                    <td>Gorengan Bakwan</td>
+                    <td>Rp3.000,-</td>
+                    <td>3</td>
+                    <td>25 Oktober 2020, 15:01:02</td>
+                </tr>
+                <tr>
+                    <td scope="row">4</td>
+                    <td>Nasi uduk</td>
+                    <td>Rp14.000,-</td>
+                    <td>2</td>
+                    <td>25 Oktober 2020, 14:04:03</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
