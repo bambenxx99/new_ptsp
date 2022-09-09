@@ -1,21 +1,23 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
 use Dompdf\Dompdf;
-use Dompdf\Options;
-class Pdf{
-    public function generate($html, $filename='', $paper = '', $orientation = '', $stream=TRUE)
-    {   
-        $options = new Options();
-        $options->set('isRemoteEnabled', TRUE);
-        $dompdf = new Dompdf($options);
-        $dompdf->loadHtml($html);
-        $dompdf->setPaper('A4', 'portrait');
-        $dompdf->render();
-        if ($stream) {
-            $dompdf->stream($filename.".pdf", array("Attachment" => FALSE));
-        } else {
-            return $dompdf->output();
-        }
-        // ini_set('display_errors',true);
+class Pdf extends Dompdf{
+
+    public $filename;
+    public function __construct(){
+        parent::__construct();
+        $this->filename = "Ticket.pdf";
+    }
+
+    protected function ci()
+    {
+        return get_instance();
+    }
+
+    public function load_view($view, $data = array()){
+        $html = $this->ci()->load->view($view, $data, TRUE);
+        $this->load_html($html);
+        $this->render();
+               $this->stream($this->filename, array("Attachment" => false));
     }
 }
