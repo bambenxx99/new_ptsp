@@ -78,22 +78,21 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <div>
-                    <?php foreach ($pesan_ticket as $pesan) : ?>
-                        <!-- <?php var_dump($pesan); ?> -->
-                        <textarea name="pesan_ticket" class="form-control form-control-sm" id="pesan_ticket"><?= $pesan['pesan']; ?></textarea>
-                </div> <?php endforeach ?>
-            </div>
-            <div class="modal-footer">
-                <form class="user" method="post" action="<?= base_url('Ticket/update_pesan'); ?>">
-                    <input type="hidden" id="to_delete" name="to_delete">
+            <form class="user" method="post" action="<?= base_url('Ticket/update_pesan'); ?>">
+                <div class="modal-body">
+                    <div>
+                        <?php foreach ($pesan_ticket as $pesan) : ?>
+                            <!-- <?php var_dump($pesan); ?> -->
+                            <textarea rows="5" name="pesan_ticket" class="form-control form-control-sm" id="pesan_ticket"><?= $pesan['pesan']; ?></textarea>
+                    </div> <?php endforeach ?>
+                </div>
+                <div class="modal-footer">
                     <button class="btn btn-primary btn-sm" type="button" data-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary btn-sm"><i class="fa">
                             Simpan
                         </i></button>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>

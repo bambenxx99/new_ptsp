@@ -121,8 +121,6 @@ class Ticket extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['semuaticket'] = $this->M_Ticket->List_ticket();
         $data['pesan_ticket'] = $this->M_Ticket->load_pesan();
-        // var_dump($data['pesan_ticket']);
-        // die;
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -133,8 +131,9 @@ class Ticket extends CI_Controller
 
     public function delete_ticket()
     {
-        $this->db->where('kode_ticket',  $this->input->post('to_delete'));
-        $this->db->delete('ticket');
+        $id = $this->input->post('to_delete');
+        $this->M_Ticket->delete_ticket($id);
+
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
         Data has been Deleted! </div>', 'refresh');
         redirect('Ticket/list_ticket');
@@ -148,13 +147,7 @@ class Ticket extends CI_Controller
             'kirimPesan' => '1',
         );
         $nomorwa = $ticket['nomorhp'];
-
         $isipesan = $this->M_Ticket->load_pesan;
-
-        // =========================================================================
-
-
-        // =========================================================================
         $this->M_Ticket->updateHavesentmessage($data, $idticket);
         $this->kirimWablas($nomorwa, $isipesan);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
@@ -215,13 +208,23 @@ class Ticket extends CI_Controller
         $this->load->library('pdf');
         $data['dataku'] = $this->M_Ticket->load_ticket($kodeticket);
         $this->pdf->setPaper('A4', 'potrait');
-		$this->pdf->filename = "laporan-data-siswa.pdf";
-		$this->pdf->load_view('pdf/pdfticket', $data);
-
+        $this->pdf->filename = "laporan-data-siswa.pdf";
+        $this->pdf->load_view('pdf/pdfticket', $data);
     }
 
 
     public function update_pesan()
     {
+        $pesan = $this->input->post('pesan_ticket');
+
+        $data = array(
+            'pesan' => $pesan
+        );
+
+        $this->M_Ticket->update_pesan($data);
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+        Pesan sudah diperbaharui </div>', 'refresh');
+        redirect('Ticket/list_ticket');
     }
 }

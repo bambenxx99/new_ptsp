@@ -16,13 +16,19 @@ class M_Ticket extends CI_Model
         $query = $this->db->get('ticket');
         return $query->result_array();
     }
-
-
     public function insert_ticket($data)
     {
         $this->db->insert('ticket', $data);
         // return $this->db->insert_id();
     }
+    public function delete_ticket($id)
+    {
+        $this->db->where('kode_ticket', $id);
+        return $this->db->delete('ticket');
+    }
+
+
+
     public function updateHavesentmessage($data, $idticket)
     {
         $this->db->where('kode_ticket', $idticket);
@@ -37,9 +43,17 @@ class M_Ticket extends CI_Model
         $this->db->join('bidang', 'layanan.id_bidang=bidang.id');
         return $this->db->get('layanan')->result();
     }
+
+
+
+
     public function load_pesan()
     {
         return $this->db->get('pesan_ticket')->result_array();
+    }
+    public function update_pesan($data)
+    {
+        return $this->db->update('pesan_ticket', $data);
     }
     public function load_ticket($kodeticket)
     {

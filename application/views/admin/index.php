@@ -12,7 +12,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Jumlah Karyawan</div>
+                                    Jumlah Ticket</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">
                                     <!-- <?= $jumlahKaryawan; ?> -->
                                 </div>
@@ -32,7 +32,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                    Cuti Bulan Ini</div>
+                                    Jumlah Ticket Hari ini</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                             </div>
                             <div class="col-auto">
@@ -49,7 +49,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Data Cuti Tahun Ini
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Jumlah Ticket Pekan ini
                                 </div>
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
@@ -75,7 +75,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                    Total Data Cuti</div>
+                                    Jumlah Ticket Bulan ini</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                             </div>
                             <div class="col-auto">
@@ -94,7 +94,7 @@
                     <div class="card shadow mb-4">
                         <!-- Card Header - Dropdown -->
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Grafik Cuti Tahun Ini</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Grafik Ticket Tahun Ini</h6>
                             <div class="dropdown no-arrow">
                                 <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>

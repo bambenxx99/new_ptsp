@@ -2,18 +2,19 @@
     <tbody>
         <tr>
             <td style="width:95.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; font-size:8pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:8pt;">&nbsp;<img src="<?= base_url(); ?>assets/img/logo_depag.png"></p>
             </td>
             <td colspan="3" style="width:421.2pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
                 <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:10pt;"><strong>KANTOR KEMENTERIAN AGAMA&nbsp;</strong></p>
                 <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:8pt;"><strong>KABUPATEN KULON PROGO&nbsp;</strong></p>
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:8pt;">Jl. *********** ***** 55611 Telepon: (0274) 773086; Faksimili: (0274) 773087</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:8pt;">Jalan Bhayangkara, Wates, Serut, Pengasih, Kec. Pengasih, Kabupaten Kulon Progo 55611</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:8pt;">Telepon: (0274) 773086; Faksimili: (0274) 773087</p>
                 <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:8pt;">Website: Kulonprogo.kemenag.go.id</p>
             </td>
         </tr>
         <tr>
             <td colspan="4" style="width:527.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; font-size:8pt;"><span style="height:0pt; display:block; position:absolute; z-index:0;"><img src="https://myfiles.space/user_files/129081_f4b7455f0dfa412a/1662716500_format-surat/1662716500_format-surat-1.png" width="710" height="6" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                <hr size="4">
             </td>
         </tr>
         <tr>
@@ -38,7 +39,7 @@
         </tr>
         <tr>
             <td style="width:95.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; font-size:8pt;">**** :</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:8pt;">Nama :</p>
             </td>
             <td style="width:152.1pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
                 <p style="margin-top:0pt; margin-bottom:0pt; font-size:8pt;">&nbsp;</p>
@@ -80,7 +81,7 @@
         </tr>
         <tr>
             <td colspan="4" style="width:527.3pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; font-size:8pt;">**** Layanan</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:8pt;">Jenis Layanan</p>
             </td>
         </tr>
         <tr>
@@ -125,11 +126,8 @@
         </tr>
         <tr>
             <td colspan="4" style="width:527.3pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; font-size:6pt;">*) Harap di **** pada waktu pengambilan berkas</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:6pt;">*) Harap dibawa pada waktu pengambilan berkas</p>
             </td>
         </tr>
     </tbody>
 </table>
-<p style="margin-top:0pt; margin-bottom:8pt; line-height:108%; font-size:8pt;">&nbsp;</p>
-<p style="margin-top:0pt; margin-bottom:8pt; line-height:108%; font-size:8pt;">&nbsp;</p>
-<div style="color: red;">Created with <a href="https://wordtohtml.net/">WordToHTML.net</a> trial.</div>
