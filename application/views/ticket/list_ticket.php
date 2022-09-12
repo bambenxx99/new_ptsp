@@ -52,12 +52,8 @@
                                     <?php if ($all_in['kirimPesan'] == 1) : ?>
                                         <button type="button" class="btn btn-sm btn-success fa fa-check-circle"></button>
                                     <?php endif ?>
-                                    <a href="<?= base_url('Ticket/laporan_pdf/' . $all_in['kode_ticket']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-file-pdf"></i>&nbsp;&nbsp;export</a>
-
-                                    <!-- <a href="<?= base_url('admin/editpegawai/' . $all_in['nama']); ?>" class="btn btn-primary btn-sm"><i class="fa fa-pen" aria-hidden="true"></i>&nbsp;&nbsp;Edit</a>-->
-
+                                    <a href="<?= base_url('Ticket/laporan_pdf/' . $all_in['kode_ticket']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-print"></i>&nbsp;&nbsp;Cetak</a>
                                     <button class="btn-delete btn btn-danger btn-sm" value="<?= $all_in['kode_ticket'] ?>" data-toggle="modal" data-target="#delete_ticket"><i class="fa fa-trash"></i>&nbsp;&nbsp;Delete</button>
-
                                 </td>
                             </tr>
                             <?php $i++; ?>

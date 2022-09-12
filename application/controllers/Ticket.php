@@ -18,11 +18,9 @@ class Ticket extends CI_Controller
         $data['title'] = 'Input Ticket';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['semuaticket'] = $this->M_Ticket->List_ticket();
+
         $data['unix'] = time();
         $data['tanggal'] = date('d-m-Y', now());
-
-        // var_dump($data);
-        // die;
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -45,6 +43,12 @@ class Ticket extends CI_Controller
                 echo json_encode($arr_result);
             }
         }
+    }
+    function get_autosyarat()
+    {
+        $idlayanan = $this->input->post('id');
+        $data = $this->M_Ticket->search_syarat($idlayanan);
+        echo json_encode($data);
     }
 
     public function proses_input_ticket()
