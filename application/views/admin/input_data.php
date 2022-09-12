@@ -13,34 +13,33 @@
                     <form method="post" action="">
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Nama Layanan</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <label for="nama_layanan">Nama Layanan</label>
+                                <input type="text" class="form-control" id="nama_layanan" placeholder="Nama Layanan">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <label for="exampleInputPassword1">Bidang</label>
+                                <select class="form-control">
+                                    <option>Kantor Kementerian Agama</option>
+                                    <option>Sekertariat Keuangan</option>
+                                    <option>Sekertariat Umum</option>
+                                    <option>Sekertariat Kepegawaian</option>
+                                    <option>Penyelenggara Haji dan Umroh</option>
+                                    <option>Bimas Islam</option>
+                                    <option>PAKIS</option>
+                                    <option>Pendidikan Madrasah</option>
+                                    <option>Penyelenggara Zakat dan Wakaf</option>
+                                    <option>Penyelenggara Katolik</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputFile">File input</label>
-                                <div class="input-group">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                    </div>
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">Upload</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                <label for="lama_waktu">Lama Waktu</label>
+                                <input type="text" class="form-control" id="lama_waktu" placeholder="Lama Waktu Dalam Hari">
                             </div>
                         </div>
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Tambah Layanan</button>
                         </div>
                     </form>
                 </div>
@@ -54,34 +53,25 @@
                     <form>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <label for="exampleInputPassword1">Jenis Layanan</label>
+                                <select class="form-control">
+                                    <option>Kantor Kementerian Agama</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="syarat_layanan">Syarat Layanan</label>
+                                <input type="text" class="form-control" id="syarat_layanan" placeholder="Syarat Layanan">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputFile">File input</label>
-                                <div class="input-group">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                    </div>
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">Upload</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
+
                         </div>
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Tambah Syarat</button>
                         </div>
                     </form>
                 </div>
