@@ -7,13 +7,12 @@
     <div class="card shadow">
         <div class="card-header">
             <h3>
-                Daftar Seluruh Pegawai
+                Daftar Admin
             </h3>
         </div>
         <div class="card-header">
             <div class="float-right">
-                <a href="<?= base_url('admin/export') ?>" class="btn btn-danger btn-sm"><i class="fa fa-file-pdf"></i>&nbsp;&nbsp;Export</a>
-                <a href=" " data-toggle="modal" data-target="#adduserModal" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Tambah</a>
+                <a href="" data-toggle="modal" data-target="#adduserModal" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Tambah</a>
             </div>
         </div>
         <!-- ========================================================== -->
@@ -38,9 +37,7 @@
                                 </td>
                                 <td><?= $all_in['email']; ?></td>
                                 <td>
-                                    <!-- <a href="<?= base_url('admin/editpegawai/' . $all_in['username']); ?>" class="btn btn-primary btn-sm"><i class="fa fa-pen" aria-hidden="true"></i>&nbsp;&nbsp;Edit</a>
-                                    <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#userAccess"><i class="fas fa-check-circle"></i></button> -->
-                                    <button class="btn-delete btn btn-danger btn-sm" value="<?= $all_in['username'] ?>" data-toggle="modal" data-target="#deleteAccount"><i class="fa fa-trash"></i>&nbsp;&nbsp;Delete</button>
+                                    <button class="btn-delete btn btn-danger btn-sm" value="<?= $all_in['id'] ?>" data-toggle="modal" data-target="#deleteAccount"><i class="fa fa-trash"></i>&nbsp;&nbsp;Delete</button>
                                 </td>
                             </tr>
                             <?php $i++; ?>
@@ -94,8 +91,8 @@
             </div>
             <div class="modal-body">Select "Delete" below if you are ready to delete account.</div>
             <div class="modal-footer">
-                <form class="user" method="post" action="<?= base_url('Admin/dell'); ?>">
-                    <input type="hidden" id="usernameTodelete" name="usernameTodelete">
+                <form class="user" method="post" action="<?= base_url('Admin/delete_account'); ?>">
+                    <input type="hidden" id="to_delete" name="to_delete">
                     <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash">
                             Delete
@@ -124,8 +121,8 @@
                             <?= form_error('name', '<small class=text-danger pl-9>', '</small>'); ?>
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-user" id="nomorusername" name="nomorusername" placeholder="Nomor Induk Pegawai" value=<?= set_value('nomorusername'); ?>>
-                            <?= form_error('nomorusername', '<small class=text-danger pl-9>', '</small>'); ?>
+                            <input type="text" class="form-control form-control-user" id="username" name="username" placeholder="username" value=<?= set_value('username'); ?>>
+                            <?= form_error('username', '<small class=text-danger pl-9>', '</small>'); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -168,6 +165,6 @@ $this->session->set_flashdata('message', null);
 </script>
 <script>
     $(".btn-delete").click(function() {
-        $('#usernameTodelete').val($(this).val());
+        $('#to_delete').val($(this).val());
     })
 </script>

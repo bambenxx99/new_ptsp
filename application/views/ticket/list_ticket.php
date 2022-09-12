@@ -78,7 +78,6 @@
                 <div class="modal-body">
                     <div>
                         <?php foreach ($pesan_ticket as $pesan) : ?>
-                            <!-- <?php var_dump($pesan); ?> -->
                             <textarea rows="5" name="pesan_ticket" class="form-control form-control-sm" id="pesan_ticket"><?= $pesan['pesan']; ?></textarea>
                     </div> <?php endforeach ?>
                 </div>

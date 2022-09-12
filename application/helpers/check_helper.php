@@ -18,6 +18,6 @@ function is_logged_in()
         );
     }
     if ($userAccess->num_rows() < 1) {
-        redirect('user');
+        redirect('ticket');
     }
 }

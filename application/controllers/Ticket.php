@@ -10,7 +10,15 @@ class Ticket extends CI_Controller
         is_logged_in();
         $this->load->model('M_Ticket');
     }
-
+    public function index()
+    {
+        $data['title'] = 'Dashboard';
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('ticket/index', $data);
+    }
 
 
     public function input()
@@ -53,6 +61,7 @@ class Ticket extends CI_Controller
 
     public function proses_input_ticket()
     {
+        $id_admin = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $date = date('y-m-d', now());
         $this->validasi_ticket();
         $data = array(
@@ -64,6 +73,7 @@ class Ticket extends CI_Controller
             'id_layanan' => $this->input->post('id_layanan'),
             'detail_ticket' => $this->input->post('detail_ticket'),
             'kirimPesan' => '0',
+            'id_admin' => $id_admin['id']
         );
         $this->M_Ticket->insert_ticket($data);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 

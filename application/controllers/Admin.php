@@ -13,7 +13,7 @@ class Admin extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Dashboard';
+        $data['title'] = 'Dashboard Admin';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -22,7 +22,7 @@ class Admin extends CI_Controller
     }
     public function userlist()
     {
-        $data['title'] = 'Data Pegawai';
+        $data['title'] = 'Data User';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['semuadata'] = $this->M_Admin->List_pegawai();
 
@@ -31,34 +31,54 @@ class Admin extends CI_Controller
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('admin/userlist', $data);
-        // var_dump($data);
-        // die;
+    }
 
-        // $this->form_validation->set_rules('AccessRole', 'AccessRole', 'required');
 
-        // if ($this->form_validation->run() === false) {
-        //     $this->load->view('templates/header', $data);
-        //     $this->load->view('templates/sidebar', $data);
-        //     $this->load->view('templates/topbar', $data);
-        //     $this->load->view('admin/userlist', $data);
-        // } else {
-        //     $AccessRole = $this->input->post('AccessRole');
+    public function addAccount()
+    {
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[user.username]', [
+            'is_unique' => 'Your usename was registered!'
+        ]);
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[user.email]', [
+            'is_unique' => 'Your E-Mail was registered!'
+        ]);
+        $this->form_validation->set_rules('password1', 'Password', 'trim|required|min_length[6]|matches[password2]', [
+            'matches' => 'Password not match!',
+            'min_length' => 'Password too short!'
+        ]);
 
-        // if ($AccessRole === 'Administrator') {
-        // $role =
-        // $data['change_role'] = $this->M_Admin->change_role();
+        $this->form_validation->set_rules('password2', 'Password', 'trim|matches[password1]');
 
-        // ['role_id' => '1'];
-        // }
-        //  else {
-        //     $role =
-        //         ['role_id' => '2'];
-        // }
 
-        //     $this->db->update('user', $role);
-        //     $this->session->set_tempdata('message', '<div class="alert alert-success" role="alert"> 
-        //         Account has been Updated! </div>', 5);
-        //     redirect('user');
-        // }
+        if ($this->form_validation->run() === false) {
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+			Terdapat Kesalahan Data!</div>');
+        } else {
+            $data = [
+                'name' => htmlspecialchars($this->input->post('name')),
+                'username' => $this->input->post('username'),
+                'email' => $this->input->post('email'),
+                'image' => 'default.jpg',
+                'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
+                'role_id' => '2',
+                'is_active' => '1'
+            ];
+
+            $this->M_Admin->addAccount($data);
+
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+			Account has been added</div>');
+            redirect('admin/userlist');
+        }
+    }
+
+    public function delete_account()
+    {
+        $id = $this->input->post('to_delete');
+        $this->M_Admin->deleteAccount($id);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+        Account has been Deleted! </div>', 5);
+        redirect('admin/userlist');
     }
 }
