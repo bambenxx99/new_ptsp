@@ -78,7 +78,7 @@
                                     <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Jenis Layanan</div>
                                     <div class="col-md-6 col-xl-9 ">
                                         <input name="jenis_layanan" type="text" id="jenis_layanan" class="form-control form-control-sm">
-                                        <input name="id_layanan" type="text" id="id_layanan" class="form-control form-control-sm">
+                                        <input name="id_layanan" type="hidden" id="id_layanan" class="form-control form-control-sm">
                                     </div>
                                 </div>
                                 <div class="row mb-2">
@@ -120,7 +120,7 @@
                                             </div>
                                         </div>
                                         <div class="row mb-2">
-                                            <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">Jangka</div>
+                                            <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">waktu</div>
                                             <div class="col-md-6 col-xl-3 ">
                                                 <input name="lama_waktu" type="text" id="lama_waktu" readonly class="form-control form-control-sm">
                                             </div>
