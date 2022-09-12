@@ -58,6 +58,10 @@ class M_Ticket extends CI_Model
     public function load_ticket($kodeticket)
     {
         $this->db->where('kode_ticket', $kodeticket);
+        $this->db->join('layanan', 'ticket.id_layanan=layanan.id_layanan');
+        $this->db->join('bidang', 'layanan.id_bidang=bidang.id');
+        $this->db->join('user', 'ticket.id_admin=user.id');
+
         return $this->db->get('ticket')->result_array();
     }
 }
