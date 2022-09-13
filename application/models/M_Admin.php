@@ -24,4 +24,10 @@ class M_Admin extends CI_Model
         $this->db->where('id', $id);
         $this->db->delete('user');
     }
+
+
+    public function add_layanan($data)
+    {
+        $this->db->insert('layanan', $data);
+    }
 }

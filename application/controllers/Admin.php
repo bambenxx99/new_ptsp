@@ -93,4 +93,32 @@ class Admin extends CI_Controller
         Account has been Deleted! </div>', 5);
         redirect('admin/userlist');
     }
+
+
+
+    public function addlayanan()
+    {
+        $this->form_validation->set_rules('nama_layanan', 'Nama layanan', 'required');
+        $this->form_validation->set_rules('lama_waktu', 'Lama Waktu', 'required');
+
+        if ($this->form_validation->run() === false) {
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+			Terdapat Kesalahan Data!</div>');
+        } else {
+            $data = [
+                'jenis_layanan' => htmlspecialchars($this->input->post('nama_layanan')),
+                'lama_waktu' => $this->input->post('lama_waktu'),
+                'id_bidang' => $this->input->post('bidang')
+
+            ];
+
+            // var_dump($data);
+            // die;
+            $this->M_Admin->add_layanan($data);
+
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+			Layanan telah ditambahkan</div>');
+            redirect('admin/input_data');
+        }
+    }
 }

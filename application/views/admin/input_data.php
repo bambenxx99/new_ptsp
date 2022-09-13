@@ -1,3 +1,10 @@
+<div class="col-lg-9">
+    <?php
+    if ($this->session->flashdata('message')) {
+        echo $this->session->flashdata('message');
+    }
+    ?>
+</div>
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -10,30 +17,30 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form method="post" action="">
+                    <form method="post" action="addlayanan">
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="nama_layanan">Nama Layanan</label>
-                                <input type="text" class="form-control" id="nama_layanan" placeholder="Nama Layanan">
+                                <input type="text" class="form-control" name="nama_layanan" id="nama_layanan" placeholder="Nama Layanan">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Bidang</label>
-                                <select class="form-control">
-                                    <option>Kantor Kementerian Agama</option>
-                                    <option>Sekertariat Keuangan</option>
-                                    <option>Sekertariat Umum</option>
-                                    <option>Sekertariat Kepegawaian</option>
-                                    <option>Penyelenggara Haji dan Umroh</option>
-                                    <option>Bimas Islam</option>
-                                    <option>PAKIS</option>
-                                    <option>Pendidikan Madrasah</option>
-                                    <option>Penyelenggara Zakat dan Wakaf</option>
-                                    <option>Penyelenggara Katolik</option>
+                                <select class="form-control" name="bidang" id="bidang" required>
+                                    <option value="1">Kantor Kementerian Agama</option>
+                                    <option value="2">Sekertariat Keuangan</option>
+                                    <option value="3">Sekertariat Umum</option>
+                                    <option value="4">Sekertariat Kepegawaian</option>
+                                    <option value="5">Penyelenggara Haji dan Umroh</option>
+                                    <option value="6">Bimas Islam</option>
+                                    <option value="7">PAKIS</option>
+                                    <option value="8">Pendidikan Madrasah</option>
+                                    <option value="9">Penyelenggara Zakat dan Wakaf</option>
+                                    <option value="10">Penyelenggara Katolik</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="lama_waktu">Lama Waktu</label>
-                                <input type="text" class="form-control" id="lama_waktu" placeholder="Lama Waktu Dalam Hari">
+                                <input type="text" class="form-control" name="lama_waktu" id="lama_waktu" placeholder="Lama Waktu Dalam Hari">
                             </div>
                         </div>
                         <!-- /.card-body -->
