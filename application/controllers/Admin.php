@@ -9,6 +9,7 @@ class Admin extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model('M_Admin');
+        $this->load->model('M_Ticket');
     }
 
     public function index()
@@ -104,20 +105,42 @@ class Admin extends CI_Controller
         if ($this->form_validation->run() === false) {
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
 			Terdapat Kesalahan Data!</div>');
+            redirect('admin/input_data');
         } else {
             $data = [
-                'jenis_layanan' => htmlspecialchars($this->input->post('nama_layanan')),
+                'jenis_layanan' => $this->input->post('nama_layanan'),
                 'lama_waktu' => $this->input->post('lama_waktu'),
                 'id_bidang' => $this->input->post('bidang')
 
             ];
 
-            // var_dump($data);
-            // die;
             $this->M_Admin->add_layanan($data);
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
 			Layanan telah ditambahkan</div>');
+            redirect('admin/input_data');
+        }
+    }
+    public function addSyarat()
+    {
+
+        $this->form_validation->set_rules('syarat_layanan', 'Syarat Layanan', 'required');
+
+        if ($this->form_validation->run() === false) {
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+        	Terdapat Kesalahan Data!</div>');
+            redirect('admin/input_data');
+        } else {
+            $data = [
+                'id_layanan' => $this->input->post('id_layanan'),
+                'syarat_layanan' => $this->input->post('syarat_layanan')
+            ];
+
+
+            $this->M_Admin->add_syarat($data);
+
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+			Syarat Layanan telah ditambahkan</div>');
             redirect('admin/input_data');
         }
     }

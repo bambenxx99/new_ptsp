@@ -24,7 +24,7 @@
                                 <input type="text" class="form-control" name="nama_layanan" id="nama_layanan" placeholder="Nama Layanan">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Bidang</label>
+                                <label for="bidang">Bidang</label>
                                 <select class="form-control" name="bidang" id="bidang" required>
                                     <option value="1">Kantor Kementerian Agama</option>
                                     <option value="2">Sekertariat Keuangan</option>
@@ -57,23 +57,17 @@
                     <div class="card-header">
                         <h3 class="card-title">Input Syarat</h3>
                     </div>
-                    <form>
+                    <form method="post" action="addSyarat">
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Jenis Layanan</label>
-                                <select class="form-control">
-                                    <option>Kantor Kementerian Agama</option>
-                                </select>
+                                <label for="jenis_layanan">Jenis Layanan</label>
+                                <input name="jenis_layanan" type="text" id="jenis_layanan" placeholder="Jenis Layanan" class="form-control">
+                                <input name="id_layanan" type="hidden" id="id_layanan" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="syarat_layanan">Syarat Layanan</label>
-                                <input type="text" class="form-control" id="syarat_layanan" placeholder="Syarat Layanan">
+                                <input type="text" class="form-control" id="syarat_layanan" name="syarat_layanan" placeholder="Syarat Layanan">
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-
                         </div>
                         <!-- /.card-body -->
 
@@ -88,3 +82,19 @@
         <!-- /.row -->
     </div><!-- /.container-fluid -->
 </section>
+
+<script type="text/javascript" src="<?= base_url(); ?>assets/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="<?= base_url(); ?>assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="<?= base_url(); ?>assets/js/jquery-ui.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#jenis_layanan').autocomplete({
+            source: "<?php echo site_url('Ticket/get_autocomplete'); ?>",
+
+            select: function(event, ui) {
+                $('[name="jenis_layanan"]').val(ui.item.label);
+                $('[name="id_layanan"]').val(ui.item.id);
+            }
+        });
+    });
+</script>

@@ -30,4 +30,8 @@ class M_Admin extends CI_Model
     {
         $this->db->insert('layanan', $data);
     }
+    public function add_syarat($data)
+    {
+        $this->db->insert('layanan_syarat', $data);
+    }
 }
