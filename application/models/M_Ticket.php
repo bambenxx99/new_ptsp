@@ -69,4 +69,14 @@ class M_Ticket extends CI_Model
 
         return $this->db->get('ticket')->result_array();
     }
+
+    public function list_layanan(){
+        $this->db->join('bidang', 'layanan.id_bidang=bidang.id');
+        return $this->db->get('layanan')->result_array();
+    }
+    public function list_syarat($id_toload){
+        $this->db->where('id_layanan', $id_toload);
+        return $this->db->get('layanan_syarat')->result_array();
+
+    }
 }

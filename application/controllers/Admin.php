@@ -144,4 +144,26 @@ class Admin extends CI_Controller
             redirect('admin/input_data');
         }
     }
+
+    public function listlayanan(){
+        $data['title'] = 'List Layanan';
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['layanan']= $this->M_Ticket->list_layanan();
+        
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('admin/listlayanan', $data);
+    }
+    public function detail_layanan(){
+        $data['title'] = 'List Layanan';
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $id_layanan=$this->input->get('layanan');
+        $data['syarat']= $this->M_Ticket->list_syarat($id_layanan);
+        
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('admin/detail_layanan', $data);
+    }
 }
