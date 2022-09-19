@@ -155,6 +155,7 @@ class Admin extends CI_Controller
         $this->load->view('templates/topbar', $data);
         $this->load->view('admin/listlayanan', $data);
     }
+    
     public function detail_layanan(){
         $data['title'] = 'List Layanan';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
