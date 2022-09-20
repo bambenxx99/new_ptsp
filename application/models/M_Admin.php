@@ -34,4 +34,24 @@ class M_Admin extends CI_Model
     {
         $this->db->insert('layanan_syarat', $data);
     }
+
+    public function deleteLayanan($id)
+    {
+        $this->db->where('id_layanan', $id);
+        $this->db->delete('layanan');
+
+    }
+    
+    public function deleteSyaratlayanan($id)
+    {
+        
+        $this->db->where('id_layanan', $id);
+        $this->db->delete('layanan_syarat');
+    }
+     public function deleteSyaratfromdetail($id)
+    {
+        $this->db->where('id_syarat', $id);
+        $this->db->delete('layanan_syarat');
+    }
+
 }

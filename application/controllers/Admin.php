@@ -144,6 +144,28 @@ class Admin extends CI_Controller
             redirect('admin/input_data');
         }
     }
+    public function addSyaratfromDetail(){
+        $this->form_validation->set_rules('syarat_layanan', 'Syarat Layanan', 'required');
+        $id_layanan=$this->input->post('id_layanan');
+
+        if ($this->form_validation->run() === false) {
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+        	Terdapat Kesalahan Data!</div>');
+            redirect('admin/input_data');
+        } else {
+            $data = [
+                'id_layanan' => $id_layanan,
+                'syarat_layanan' => $this->input->post('syarat_layanan')
+            ];
+
+
+            $this->M_Admin->add_syarat($data);
+
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+			Syarat Layanan telah ditambahkan</div>');
+            redirect('admin/detail_layanan?layanan='.$id_layanan);
+        }
+    }
 
     public function listlayanan(){
         $data['title'] = 'List Layanan';
@@ -168,5 +190,25 @@ class Admin extends CI_Controller
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('admin/detail_layanan', $data);
+    }
+
+    public function delete_layanan()
+    {
+        $id = $this->input->post('to_delete');
+        $this->M_Admin->deletelayanan($id);
+        $this->M_Admin->deleteSyaratlayanan($id);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+        Layanan has been Deleted! </div>', 5);
+        redirect('admin/listlayanan');
+    }
+
+    public function delete_syarat()
+    {
+        $id = $this->input->post('to_delete');
+        $this->M_Admin->deleteSyaratfromdetail($id);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+        Layanan has been Deleted! </div>', 5);
+        redirect('admin/listlayanan');
+        // redirect('admin/detail_layanan?layanan='.$id_layanan);
     }
 }

@@ -14,7 +14,7 @@
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Jumlah Ticket</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                    <!-- <?= $jumlahKaryawan; ?> -->
+                                    <?= $jumlahTicket; ?>
                                 </div>
                             </div>
                             <div class="col-auto">
@@ -33,7 +33,9 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Jumlah Ticket Hari ini</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    <?= $ticketHariini?>
+                                </div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -49,11 +51,13 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Jumlah Ticket Pekan ini
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Jumlah Ticket Bulan Ini
                                 </div>
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
-                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"></div>
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                            <?= $ticketBulanIni ?>
+                                        </div>
                                     </div>
                                     <div class="col">
 
@@ -75,8 +79,10 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                    Jumlah Ticket Bulan ini</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                    Jumlah TLayanan</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    <?= $jumlahLayanan ?>
+                                </div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-sticky-note fa-2x text-gray-300"></i>

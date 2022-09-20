@@ -65,7 +65,7 @@
             </div>
             <div class="modal-body">Select "Delete" below if you are ready to delete layanan.</div>
             <div class="modal-footer">
-                <form class="user" method="post" action="<?= base_url('Ticket/delete_layanan'); ?>">
+                <form class="user" method="post" action="<?= base_url('Admin/delete_layanan'); ?>">
                     <input type="hidden" id="to_delete" name="to_delete">
                     <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash">
@@ -85,7 +85,6 @@ $this->load->view('templates/footer');
 $this->session->set_flashdata('message', null);
 ?>
 <script type="text/javascript">
-    // $.fn.dataTable.moment('DD/MM/YYYY HH:mm');
     $(document).ready(function() {
         $('#layanan_table').DataTable({
             "pageLength": 25

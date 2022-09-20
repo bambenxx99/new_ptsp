@@ -14,6 +14,13 @@ class Ticket extends CI_Controller
     {
         $data['title'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+
+
+        $data['jumlahTicket'] = $this->M_Ticket->hitungTicket();
+        $data['ticketHariini'] = $this->M_Ticket->hitungTickethariIni();
+        $data['ticketBulanIni'] = $this->M_Ticket->hitungTicketbulanini();
+        $data['jumlahLayanan'] = $this->M_Ticket->hitungLayanan();
+
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);

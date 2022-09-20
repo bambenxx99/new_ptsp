@@ -79,4 +79,46 @@ class M_Ticket extends CI_Model
         return $this->db->get('layanan_syarat')->result_array();
 
     }
+
+    public function hitungTicket(){
+        $query = $this->db->get('ticket');
+        if ($query->num_rows() > 0) {
+            return $query->num_rows();
+        } else {
+            return 0;
+        }
+    }
+    public function hitungTickethariIni(){
+        $this->db->select('*');
+        $this->db->from('ticket');
+        $this->db->where('DAY(tanggal)', date('d'));
+        $this->db->where('MONTH(tanggal)', date('m'));
+        $this->db->where('YEAR(tanggal)', date('Y'));
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->num_rows();
+        } else {
+            return 0;
+        }
+    }
+    public function hitungTicketbulanini(){
+        $this->db->select('*');
+        $this->db->from('ticket');
+        $this->db->where('MONTH(tanggal)', date('m'));
+        $this->db->where('YEAR(tanggal)', date('Y'));
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->num_rows();
+        } else {
+            return 0;
+        }
+    }
+    public function hitungLayanan(){
+        $query = $this->db->get('layanan');
+        if ($query->num_rows() > 0) {
+            return $query->num_rows();
+        } else {
+            return 0;
+        }
+    }
 }
