@@ -15,8 +15,7 @@
                     <div class="card text-white bg-success" style="max-width: 45rem;">
                         <div class="card-header"><h3 style="color:black">Layanan</h3></div>
                         <div class="card-body">
-                            <h5 class="card-title">Success card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text"><?= $namalayanan['jenis_layanan'] ?></p>
                         </div>
 
                     </div>

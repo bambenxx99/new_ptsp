@@ -161,6 +161,8 @@ class Admin extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $id_layanan=$this->input->get('layanan');
         $data['syarat']= $this->M_Ticket->list_syarat($id_layanan);
+        $data['namalayanan']= $this->db->get_where('layanan',['id_layanan'=>$id_layanan])->row_array();
+
         
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
