@@ -36,7 +36,7 @@
                                 <th scope="row"><?= $i ?></th>
                                 <td>
                                     <!-- <a href="<?= base_url('admin/profil?cariAkun=' . $all_in['nip']); ?>"><?= $all_in['name']; ?></a> -->
-                                    <a href="<?= base_url('admin/detail_layanan?layanan='. $all_in['id']); ?>"><?= $all_in['jenis_layanan']; ?></a>
+                                    <a href="<?= base_url('admin/detail_layanan?layanan='. $all_in['id_layanan']); ?>"><?= $all_in['jenis_layanan']; ?></a>
                                 </td>
                                 <td>
                                     <?= $all_in['nama_bidang']; ?><br>
