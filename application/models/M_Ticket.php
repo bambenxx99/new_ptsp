@@ -48,7 +48,7 @@ class M_Ticket extends CI_Model
     public function search_syarat($idlayanan)
     {
         $this->db->where('id_layanan', $idlayanan);
-        return $this->db->get('layanan_syarat')->result();
+        return $this->db->get('layanan_syarat');
     }
 
 
@@ -56,6 +56,7 @@ class M_Ticket extends CI_Model
     {
         return $this->db->get('pesan_ticket')->result_array();
     }
+
     public function update_pesan($data)
     {
         return $this->db->update('pesan_ticket', $data);
@@ -70,17 +71,19 @@ class M_Ticket extends CI_Model
         return $this->db->get('ticket')->result_array();
     }
 
-    public function list_layanan(){
+    public function list_layanan()
+    {
         $this->db->join('bidang', 'layanan.id_bidang=bidang.id');
         return $this->db->get('layanan')->result_array();
     }
-    public function list_syarat($id_toload){
+    public function list_syarat($id_toload)
+    {
         $this->db->where('id_layanan', $id_toload);
         return $this->db->get('layanan_syarat')->result_array();
-
     }
 
-    public function hitungTicket(){
+    public function hitungTicket()
+    {
         $query = $this->db->get('ticket');
         if ($query->num_rows() > 0) {
             return $query->num_rows();
@@ -88,7 +91,8 @@ class M_Ticket extends CI_Model
             return 0;
         }
     }
-    public function hitungTickethariIni(){
+    public function hitungTickethariIni()
+    {
         $this->db->select('*');
         $this->db->from('ticket');
         $this->db->where('DAY(tanggal)', date('d'));
@@ -101,7 +105,8 @@ class M_Ticket extends CI_Model
             return 0;
         }
     }
-    public function hitungTicketbulanini(){
+    public function hitungTicketbulanini()
+    {
         $this->db->select('*');
         $this->db->from('ticket');
         $this->db->where('MONTH(tanggal)', date('m'));
@@ -113,7 +118,8 @@ class M_Ticket extends CI_Model
             return 0;
         }
     }
-    public function hitungLayanan(){
+    public function hitungLayanan()
+    {
         $query = $this->db->get('layanan');
         if ($query->num_rows() > 0) {
             return $query->num_rows();

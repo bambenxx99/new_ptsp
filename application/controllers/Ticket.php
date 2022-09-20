@@ -163,13 +163,16 @@ class Ticket extends CI_Controller
     {
         $idticket = $this->input->post('id_tomessage');
         $ticket = $this->db->get_where('ticket', ['kode_ticket' => $idticket])->row_array();
+        $isipesan = $this->db->get('pesan_ticket')->row_array();
 
         $data = array(
             'kirimPesan' => '1',
         );
+        $message = $isipesan['pesan'];
         $nomorwa = $ticket['nomorhp'];
-        $isipesan = $this->M_Ticket->load_pesan;
-        $this->kirimWablas($nomorwa, $isipesan);
+        // var_dump($message);
+        // die;
+        $this->kirimWablas($nomorwa, $message);
         $this->M_Ticket->updateHavesentmessage($data, $idticket);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
         Message has been sent ! </div>', 'refresh');
