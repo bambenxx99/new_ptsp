@@ -12,11 +12,11 @@
             <div class="col-md-6">
                 <!-- general form elements -->
                 <div class="card card-primary">
-                    <div class="card text-white bg-success" style="max-width: 45rem;">
+                    <div class="card text-white bg-success">
                         <div class="card-header"><h3 style="color:black">Layanan</h3></div>
                         <div class="card-body">
-                            <p class="card-text"><?= $namalayanan['jenis_layanan'] ?></p>
-                            <p class="card-text"><?= $namalayanan['id_layanan'] ?></p>
+                            <p class="card-text" style="color:black"><?= $namalayanan['jenis_layanan'] ?></p>
+                            <!-- <p class="card-text"><?= $namalayanan['id_layanan'] ?></p> -->
                         </div>
 
                     </div>
