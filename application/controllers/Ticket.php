@@ -169,12 +169,13 @@ class Ticket extends CI_Controller
         );
         $nomorwa = $ticket['nomorhp'];
         $isipesan = $this->M_Ticket->load_pesan;
-        $this->M_Ticket->updateHavesentmessage($data, $idticket);
         $this->kirimWablas($nomorwa, $isipesan);
+        $this->M_Ticket->updateHavesentmessage($data, $idticket);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
         Message has been sent ! </div>', 'refresh');
         redirect('Ticket/list_ticket');
     }
+
     private function kirimWablas($phone, $message)
     {
         // $link  =  "https://app.ruangwa.id/api/send_message";
@@ -204,26 +205,55 @@ class Ticket extends CI_Controller
         // curl_close($curl);
         // return $result;
 
-        $token = "WDK2n8KAVuNw7r21pmrZCVqyfpDXUHypHCPcChUvCa1a15y2vt";
-        // $phone = "62812xxxxxx"; //untuk group pakai groupid contoh: 62812xxxxxx-xxxxx
-        // $message = "Testing by API ruangwa";
-
         $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://app.ruangwa.id/api/send_message',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => 'token=' . $token . '&number=' . $phone . '&message=' . $message,
-        ));
-        $response = curl_exec($curl);
+        $token = "fY3R48uL8XTJrHIxZLej65cnynr0ZNsBEN2GOH5Ghcra1A2mjQOvbkohDkduJYyi";
+        $link  =  "https://jogja.wablas.com/api/send-message";
+
+        $data = [
+            'phone' => $phone,
+            'message' => $message,
+        ];
+        curl_setopt(
+            $curl,
+            CURLOPT_HTTPHEADER,
+            array(
+                "Authorization: $token",
+            )
+        );
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
+        curl_setopt($curl, CURLOPT_URL, $link);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+        $result = curl_exec($curl);
         curl_close($curl);
-        echo $response;
+        echo "<pre>";
+        print_r($result);
+
+
+        ////////RUANG WA
+        // $token = "WDK2n8KAVuNw7r21pmrZCVqyfpDXUHypHCPcChUvCa1a15y2vt";
+
+        // $curl = curl_init();
+        // curl_setopt_array($curl, array(
+        //     CURLOPT_URL => 'https://app.ruangwa.id/api/send_message',
+        //     CURLOPT_RETURNTRANSFER => true,
+        //     CURLOPT_ENCODING => '',
+        //     CURLOPT_MAXREDIRS => 10,
+        //     CURLOPT_TIMEOUT => 0,
+        //     CURLOPT_FOLLOWLOCATION => true,
+        //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //     CURLOPT_CUSTOMREQUEST => 'POST',
+        //     CURLOPT_POSTFIELDS => 'token=' . $token . '&number=' . $phone . '&message=' . $message,
+        // ));
+        // $response = curl_exec($curl);
+        // curl_close($curl);
+        // echo $response;
     }
+
+
+
     public function laporan_pdf($kodeticket)
     {
         $this->load->library('pdf');
