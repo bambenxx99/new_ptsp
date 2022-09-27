@@ -48,7 +48,7 @@ class M_Ticket extends CI_Model
     public function search_syarat($idlayanan)
     {
         $this->db->where('id_layanan', $idlayanan);
-        return $this->db->get('layanan_syarat');
+        return $this->db->get('layanan_syarat')->result();;
     }
 
 

@@ -11,27 +11,8 @@
 
 
     <form method="post" action="proses_input_ticket" id="form1">
-        <!-- <script type="text/javascript">
-      
-            var theForm = document.forms['form1'];
-            if (!theForm) {
-                theForm = document.form1;
-            }
-
-            function __doPostBack(eventTarget, eventArgument) {
-                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-                    theForm.__EVENTTARGET.value = eventTarget;
-                    theForm.__EVENTARGUMENT.value = eventArgument;
-                    theForm.submit();
-                }
-            }
-        
-        </script> -->
-
         <div id="UpdatePanel1">
-            <input type="hidden" name="ctl00$ContentPlaceHolder1$HiddenField1" id="ContentPlaceHolder1_HiddenField1" value="ee8a0343-c3f1-4522-99ed-3e56cf305b36">
             <div class="mb-2">
-                <!-- <input name="sendTicket" type="submit" id="sendTicket" class="btn btn-primary btn-sm" value="Kirim "> -->
                 <input type="submit" name="sendTicket" id="sendTicket" value=" Kirim " class="btn btn-primary btn-sm" disabled="" />
                 &nbsp; <span>
                     <span id="ContentPlaceHolder1_lblPesan" class="text-danger"></span></span>
@@ -55,7 +36,7 @@
                                     <div class="row mb-2">
                                         <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">Jabatan Pemohon</div>
                                         <div class="col-md-6 col-xl-8 ">
-                                            <input name="jabatan_pemohon" type="text" id="jabatan_pemohon" class="form-control form-control-sm">
+                                            <input name="jabatan_pemohon" type="text" id="jabatan_pemohon" placeholder="pemohon" class="form-control form-control-sm">
                                         </div>
                                     </div>
                                     <div class="row mb-2">

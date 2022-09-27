@@ -27,6 +27,7 @@
                             <td>Kode Ticket</td>
                             <td>Nama</td>
                             <td>Layanan</td>
+                            <td>Detail</td>
                             <td>Action</td>
                         </tr>
                     </thead>
@@ -44,6 +45,9 @@
                                 <td>
                                     <?= $all_in['jenis_layanan']; ?><br>
                                     <?= $all_in['tanggal']; ?>
+                                </td>
+                                <td>
+                                    <?= $all_in['detail_ticket']; ?><br>
                                 </td>
                                 <td>
                                     <?php if ($all_in['kirimPesan'] == 0) : ?>
