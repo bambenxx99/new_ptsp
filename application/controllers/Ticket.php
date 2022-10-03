@@ -170,9 +170,11 @@ class Ticket extends CI_Controller
         );
         $message = $isipesan['pesan'];
         $nomorwa = $ticket['nomorhp'];
+        $name = $ticket['nama'];
+        $message_sent = "Salam bapak/ibu " . $name . " <br>" . $message;
         // var_dump($message);
         // die;
-        $this->kirimWablas($nomorwa, $message);
+        $this->kirimWablas($nomorwa, $message_sent);
         $this->M_Ticket->updateHavesentmessage($data, $idticket);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
         Message has been sent ! </div>', 'refresh');
