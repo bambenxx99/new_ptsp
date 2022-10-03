@@ -235,7 +235,7 @@ class Ticket extends CI_Controller
         $this->load->library('pdf');
         $data['dataku'] = $this->M_Ticket->load_ticket($kodeticket);
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-        $this->pdf->setPaper('A4', 'potrait');
+        $this->pdf->setPaper(array(0, 0, 609.4488, 935.433), 'potrait');
         $this->pdf->filename = "laporan-data-siswa.pdf";
         $this->pdf->load_view('pdf/pdfticket', $data);
     }

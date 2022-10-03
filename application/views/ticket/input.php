@@ -36,7 +36,7 @@
                                     <div class="row mb-2">
                                         <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">Jabatan Pemohon</div>
                                         <div class="col-md-6 col-xl-8 ">
-                                            <input name="jabatan_pemohon" type="text" id="jabatan_pemohon" placeholder="pemohon" class="form-control form-control-sm">
+                                            <input name="jabatan_pemohon" type="text" id="jabatan_pemohon" placeholder="pemohon" value="pemohon" class="form-control form-control-sm">
                                         </div>
                                     </div>
                                     <div class="row mb-2">
