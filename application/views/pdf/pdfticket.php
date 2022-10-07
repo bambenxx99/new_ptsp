@@ -2,7 +2,7 @@
 
     <table cellpadding="0" cellspacing="0" style="width:538.4pt; border-collapse:collapse;">
         <tbody>
-            <?php $i = 1; ?>
+            <!-- <?php $i = 1; ?> -->
             <?php foreach ($dataku as $ticket) : ?>
                 <tr>
                     <td colspan="3" style="width:88.2pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
@@ -157,7 +157,7 @@
                         <p style="margin-top:0pt; margin-bottom:0pt; font-size:6pt;">*) Harap di bawa pada waktu pengambilan berkas</p>
                     </td>
                 </tr>
-                <?php $i++; ?>
+                <!-- <?php $i++; ?> -->
             <?php endforeach ?>
         </tbody>
     </table>

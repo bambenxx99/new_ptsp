@@ -105,6 +105,20 @@ class M_Ticket extends CI_Model
             return 0;
         }
     }
+    public function listtickettoday()
+    {
+        $this->db->select('*');
+        $this->db->from('ticket');
+        $this->db->where('DAY(tanggal)', date('d'));
+        $this->db->where('MONTH(tanggal)', date('m'));
+        $this->db->where('YEAR(tanggal)', date('Y'));
+        $query = $this->db->get();
+        if ($query->result_array() > 0) {
+            return $query->result_array();
+        } else {
+            return 0;
+        }
+    }
     public function hitungTicketbulanini()
     {
         $this->db->select('*');

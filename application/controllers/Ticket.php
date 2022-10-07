@@ -20,6 +20,7 @@ class Ticket extends CI_Controller
         $data['ticketHariini'] = $this->M_Ticket->hitungTickethariIni();
         $data['ticketBulanIni'] = $this->M_Ticket->hitungTicketbulanini();
         $data['jumlahLayanan'] = $this->M_Ticket->hitungLayanan();
+        $data['listtickethariini'] = $this->M_Ticket->listtickettoday();
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -238,7 +239,7 @@ class Ticket extends CI_Controller
         $data['dataku'] = $this->M_Ticket->load_ticket($kodeticket);
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->pdf->setPaper(array(0, 0, 609.4488, 935.433), 'potrait');
-        $this->pdf->filename = "laporan-data-siswa.pdf";
+        $this->pdf->filename = "Ticket.pdf";
         $this->pdf->load_view('pdf/pdfticket', $data);
     }
 

@@ -54,10 +54,10 @@
                                         <button type="button" class="btn-message btn-sm btn-success" value="<?= $all_in['kode_ticket'] ?>" data-toggle="modal" data-target="#send_message">Send</button>
                                     <?php endif ?>
                                     <?php if ($all_in['kirimPesan'] == 1) : ?>
-                                        <button type="button" class="btn btn-sm btn-success fa fa-check-circle"></button>
-                                    <?php endif ?>
-                                    <a href="<?= base_url('Ticket/laporan_pdf/' . $all_in['kode_ticket']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-print"></i>&nbsp;&nbsp;Cetak</a>
-                                    <button class="btn-delete btn btn-danger btn-sm" value="<?= $all_in['kode_ticket'] ?>" data-toggle="modal" data-target="#delete_ticket"><i class="fa fa-trash"></i>&nbsp;&nbsp;Delete</button>
+                                        <button type="button" class="btn-message btn-sm btn-success fa fa-check-circle"></button>
+                                    <?php endif ?><br><br>
+                                    <a href="<?= base_url('Ticket/laporan_pdf/' . $all_in['kode_ticket']); ?>"><button type="button" class="btn-message btn-sm btn-danger"><i class="fa fa-print"></i>&nbsp;&nbsp;Cetak</button></a><br><br>
+                                    <button type="button" class="btn-message btn-sm btn-delete btn-danger" value="<?= $all_in['kode_ticket'] ?>" data-toggle="modal" data-target="#delete_ticket"><i class="fa fa-trash"></i>&nbsp;&nbsp;Delete</button>
                                 </td>
                             </tr>
                             <?php $i++; ?>

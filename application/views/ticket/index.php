@@ -34,7 +34,7 @@
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Jumlah Ticket Hari ini</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                    <?= $ticketHariini?>
+                                    <?= $ticketHariini ?>
                                 </div>
                             </div>
                             <div class="col-auto">
@@ -79,7 +79,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                    Jumlah TLayanan</div>
+                                    Jumlah Layanan</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">
                                     <?= $jumlahLayanan ?>
                                 </div>
@@ -115,7 +115,7 @@
                             </div>
                         </div>
                         <!-- Card Body -->
-                        <!-- <div class="card-body">
+                        <div class="card-body">
                             <div class="chartContainer">
                                 <canvas id="myChart"></canvas>
                                 <?php
@@ -129,7 +129,7 @@
                                 // }
                                 ?>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-12">
@@ -140,6 +140,7 @@
                             <div class="dropdown no-arrow">
                                 <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                                     <div class="dropdown-header">Dropdown:</div>
@@ -148,7 +149,20 @@
                             </div>
                         </div>
                         <!-- Card Body -->
-
+                        <div class="card-body">
+                            <?php $x = 1; ?>
+                            <?php foreach ($listtickethariini as $ticketoday) : ?>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Ticket/laporan_pdf/' . $ticketoday['kode_ticket']); ?>" class=" nav-link">
+                                            <th scope="row"><?= $x ?>. </th>
+                                            <?= $ticketoday['nama']; ?> </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <?php $x++; ?>
+                            <?php endforeach ?>
+                        </div>
                     </div>
                 </div>
                 <!-- Pie Chart -->
@@ -171,7 +185,7 @@ $this->session->set_flashdata('message', null);
         data: {
             labels: [<?php echo $jenis_cuti; ?>],
             datasets: [{
-                label: 'Jumlah Cuti ',
+                label: 'Jumlah Ticket ',
                 backgroundColor: ['rgb(255, 99, 132)', 'rgba(56, 86, 255, 0.87)', 'rgb(60, 179, 113)', 'rgb(175, 238, 239)'],
                 borderColor: ['rgb(255, 99, 132)'],
                 data: [<?php echo $jumlah; ?>]
