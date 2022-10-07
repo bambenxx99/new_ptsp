@@ -116,18 +116,16 @@
                         </div>
                         <!-- Card Body -->
                         <div class="card-body">
-                            <div class="chartContainer">
-                                <canvas id="myChart"></canvas>
-                                <?php
-                                // $jenis_cuti = "";
-                                // $jumlah = null;
-                                // foreach ($chart1 as $item) {
-                                //     $jur = $item->jenis_cuti;
-                                //     $jenis_cuti .= "'$jur'" . ", ";
-                                //     $jum = $item->total;
-                                //     $jumlah .= "$jum" . ", ";
-                                // }
-                                ?>
+                            <div class="chart">
+                                <div class="chartjs-size-monitor">
+                                    <div class="chartjs-size-monitor-expand">
+                                        <div class=""></div>
+                                    </div>
+                                    <div class="chartjs-size-monitor-shrink">
+                                        <div class=""></div>
+                                    </div>
+                                </div>
+                                <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 580px;" class="chartjs-render-monitor" width="725" height="312"></canvas>
                             </div>
                         </div>
                     </div>
@@ -153,8 +151,8 @@
                             <?php $x = 1; ?>
                             <?php foreach ($listtickethariini as $ticketoday) : ?>
                                 <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('Ticket/laporan_pdf/' . $ticketoday['kode_ticket']); ?>" class=" nav-link">
+                                    <li class="btn-sm btn-primary ">
+                                        <a href="<?= base_url('Ticket/laporan_pdf/' . $ticketoday['kode_ticket']); ?>" class="nav-link" style="color:white">
                                             <th scope="row"><?= $x ?>. </th>
                                             <?= $ticketoday['nama']; ?> </span>
                                         </a>
@@ -176,30 +174,20 @@
 $this->load->view('templates/footer');
 $this->session->set_flashdata('message', null);
 ?>
+<script src="<?= base_url('assets/'); ?>chart.js/Chart.min.js"></script>
+<script src="<?= base_url('assets/'); ?>chart.js/Chart.js"></script>
+
 <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'bar',
-        // The data for our dataset
-        data: {
-            labels: [<?php echo $jenis_cuti; ?>],
-            datasets: [{
-                label: 'Jumlah Ticket ',
-                backgroundColor: ['rgb(255, 99, 132)', 'rgba(56, 86, 255, 0.87)', 'rgb(60, 179, 113)', 'rgb(175, 238, 239)'],
-                borderColor: ['rgb(255, 99, 132)'],
-                data: [<?php echo $jumlah; ?>]
-            }]
-        },
-        // Configuration options go here
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    });
+    var barChartCanvas = $('#barChart').get(0).getContext('2d')
+    var barChartData = $.extend(true, {}, areaChartData)
+    var temp0 = areaChartData.datasets[0]
+    var temp1 = areaChartData.datasets[1]
+    barChartData.datasets[0] = temp1
+    barChartData.datasets[1] = temp0
+
+    var barChartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        datasetFill: false
+    }
 </script>
