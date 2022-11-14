@@ -33,7 +33,7 @@ class Ticket extends CI_Controller
     {
         $data['title'] = 'Input Ticket';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-        $data['semuaticket'] = $this->M_Ticket->List_ticket();
+        // $data['semuaticket'] = $this->M_Ticket->List_ticket();
 
         $data['unix'] = time();
         $data['tanggal'] = date('d-m-Y', now());
@@ -43,6 +43,8 @@ class Ticket extends CI_Controller
         $this->load->view('templates/topbar', $data);
         $this->load->view('ticket/input', $data);
     }
+
+
 
     function get_autocomplete()
     {
@@ -86,6 +88,43 @@ class Ticket extends CI_Controller
         $this->M_Ticket->insert_ticket($data);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
         Data has been inserted </div>', 'refresh');
+        redirect('Ticket/list_ticket');
+    }
+
+    public function edit($idticketedit)
+    {
+        $data['title'] = 'Edit Ticket';
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['dataedit'] = $this->M_Ticket->load_edit_ticket($idticketedit);
+
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('ticket/edit', $data);
+    }
+
+    public function proses_edit_ticket()
+    {
+        $id_admin = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $kodeticket = $this->input->post('no_ticket');
+        // var_dump($kodeticket);
+        // die;    
+        $this->validasi_ticket();
+        $data = array(
+            'nama' => $this->input->post('nama_pemohon'),
+            'jabatan_pemohon' => $this->input->post('jabatan_pemohon'),
+            'nomorhp' => $this->input->post('no_hp'),
+            'id_layanan' => $this->input->post('id_layanan'),
+            'detail_ticket' => $this->input->post('detail_ticket'),
+            'kirimPesan' => '0',
+            'id_admin' => $id_admin['id']
+        );
+
+
+        $this->M_Ticket->edit_ticket($kodeticket, $data);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> 
+        Data has been Update </div>', 'refresh');
         redirect('Ticket/list_ticket');
     }
 

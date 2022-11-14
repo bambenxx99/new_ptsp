@@ -26,6 +26,22 @@ class M_Ticket extends CI_Model
         $this->db->where('kode_ticket', $id);
         return $this->db->delete('ticket');
     }
+    public function load_edit_ticket($idticketedit)
+    {
+        $this->db->where('kode_ticket', $idticketedit);
+        $this->db->join('layanan', 'ticket.id_layanan=layanan.id_layanan');
+        $query = $this->db->get('ticket');
+        return $query->result_array();
+    }
+
+
+    
+    public function edit_ticket($kodeticket, $data)
+    {
+        $this->db->where('kode_ticket', $kodeticket);
+        $this->db->update('ticket', $data);
+    }
+
 
 
 
