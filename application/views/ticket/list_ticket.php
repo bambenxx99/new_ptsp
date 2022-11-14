@@ -22,13 +22,18 @@
             <div class="table-responsive">
                 <table class="table table-bordered" cellspacing="0" cellpadding="3" width="100%" id="Ticket_table">
                     <thead>
-                        <tr>
+                        <tr class="table-active">
                             <td>No</td>
                             <td>Kode Ticket</td>
-                            <td>Nama</td>
-                            <td>Layanan</td>
-                            <td>Detail</td>
-                            <td>Action</td>
+                            <td>
+                                <center>Info Layanan</center>
+                            </td>
+                            <td>
+                                <center>Detail</center>
+                            </td>
+                            <td width="150px">
+                                <center>Action</center>
+                            </td>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,13 +41,11 @@
                         <?php $i = 1; ?>
                         <?php foreach ($semuaticket as $all_in) : ?>
                             <tr>
-                                <th scope="row"><?= $i ?></th>
+                                <th scope=" row"><?= $i ?></th>
                                 <td><?= $all_in['kode_ticket']; ?></td>
                                 <td>
                                     <?= $all_in['nama']; ?><br>
                                     <?= $all_in['nomorhp']; ?>
-                                </td>
-                                <td>
                                     <?= $all_in['jenis_layanan']; ?><br>
                                     <?= $all_in['tanggal']; ?>
                                 </td>
@@ -55,10 +58,10 @@
                                     <?php endif ?>
                                     <?php if ($all_in['kirimPesan'] == 1) : ?>
                                         <button type="button" class="btn-message btn-sm btn-success fa fa-check-circle"></button>
-                                    <?php endif ?><br><br>
-                                    <a href="<?= base_url('Ticket/laporan_pdf/' . $all_in['kode_ticket']); ?>"><button type="button" class="btn-message btn-sm btn-danger"><i class="fa fa-print"></i>&nbsp;&nbsp;Cetak</button></a><br><br>
-                                    <a href="<?= base_url('Ticket/edit/' . $all_in['kode_ticket']); ?>"><button type="button" class="btn-message btn-sm btn-primary"><i class="fa fa-pen"></i>&nbsp;&nbsp;Edit</button></a><br><br>
-                                    <button type="button" class="btn-message btn-sm btn-delete btn-danger" value="<?= $all_in['kode_ticket'] ?>" data-toggle="modal" data-target="#delete_ticket"><i class="fa fa-trash"></i>&nbsp;&nbsp;Delete</button>
+                                    <?php endif ?>
+                                    <a href="<?= base_url('Ticket/laporan_pdf/' . $all_in['kode_ticket']); ?>"><button type="button" class="btn-message btn-sm btn-info"><i class="fa fa-print"></i></button></a>
+                                    <a href="<?= base_url('Ticket/edit/' . $all_in['kode_ticket']); ?>"><button type="button" class="btn-message btn-sm btn-primary"><i class="fa fa-pen"></i></button></a>
+                                    <button type="button" class="btn-message btn-sm btn-delete btn-danger" value="<?= $all_in['kode_ticket'] ?>" data-toggle="modal" data-target="#delete_ticket"><i class="fa fa-trash"></i></button>
                                 </td>
                             </tr>
                             <?php $i++; ?>
