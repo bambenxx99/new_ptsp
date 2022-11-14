@@ -117,7 +117,6 @@ class Ticket extends CI_Controller
             'nomorhp' => $this->input->post('no_hp'),
             'id_layanan' => $this->input->post('id_layanan'),
             'detail_ticket' => $this->input->post('detail_ticket'),
-            'kirimPesan' => '0',
             'id_admin' => $id_admin['id']
         );
 

@@ -45,7 +45,7 @@
                                 <td><?= $all_in['kode_ticket']; ?></td>
                                 <td>
                                     <?= $all_in['nama']; ?><br>
-                                    <?= $all_in['nomorhp']; ?>
+                                    <?= $all_in['nomorhp']; ?><br>
                                     <?= $all_in['jenis_layanan']; ?><br>
                                     <?= $all_in['tanggal']; ?>
                                 </td>
