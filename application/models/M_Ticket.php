@@ -35,7 +35,7 @@ class M_Ticket extends CI_Model
     }
 
 
-    
+
     public function edit_ticket($kodeticket, $data)
     {
         $this->db->where('kode_ticket', $kodeticket);
@@ -59,6 +59,16 @@ class M_Ticket extends CI_Model
         $this->db->join('bidang', 'layanan.id_bidang=bidang.id');
         return $this->db->get('layanan')->result();
     }
+
+
+    public function search_customer($nama)
+    {
+        $this->db->like('nama', $nama, 'both');
+        $this->db->order_by('nama', 'ASC');
+        $this->db->limit(5);
+        return $this->db->get('ticket')->result();
+    }
+
 
 
     public function search_syarat($idlayanan)

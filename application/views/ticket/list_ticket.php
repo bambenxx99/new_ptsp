@@ -44,10 +44,10 @@
                                 <th scope=" row"><?= $i ?></th>
                                 <td><?= $all_in['kode_ticket']; ?></td>
                                 <td>
-                                    <?= $all_in['nama']; ?><br>
-                                    <?= $all_in['nomorhp']; ?><br>
-                                    <?= $all_in['jenis_layanan']; ?><br>
-                                    <?= $all_in['tanggal']; ?>
+                                    <i class="fas fa-fw fa-user"></i><?= $all_in['nama']; ?><br>
+                                    <i class="fas fa-fw fa-phone"></i><?= $all_in['nomorhp']; ?><br></i>
+                                    <i class="fas fa-fw fa-file"></i><?= $all_in['jenis_layanan']; ?><br>
+                                    <i class="fas fa-fw fa-calendar"></i></i><?= $all_in['tanggal']; ?>
                                 </td>
                                 <td>
                                     <?= $all_in['detail_ticket']; ?><br>

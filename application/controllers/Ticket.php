@@ -62,6 +62,20 @@ class Ticket extends CI_Controller
             }
         }
     }
+    function get_autocustomer()
+    {
+        if (isset($_GET['term'])) {
+            $result = $this->M_Ticket->search_customer($_GET['term']);
+            if (count($result) > 0) {
+                foreach ($result as $row)
+                    $arr_result2[] = array(
+                        'nama'            => $row->nama,
+                        'nomorhp'         => $row->nomorhp,
+                    );
+                echo json_encode($arr_result2);
+            }
+        }
+    }
     function get_autosyarat()
     {
         $idlayanan = $this->input->post('id');

@@ -198,6 +198,15 @@ $this->session->set_flashdata('message', null);
             }
         });
 
+        $('#nama_pemohon').autocomplete({
+            source: "<?php echo site_url('Ticket/get_autocustomer'); ?>",
+
+            select: function(event, ui) {
+                $('[name="nama_pemohon"]').val(ui.item.nama);
+                $('[name="no_hp"]').val(ui.item.nomorhp);
+            }
+        });
+
 
         $('#jenis_layanan').change(function() {
             var id = $(id_layanan).val();
