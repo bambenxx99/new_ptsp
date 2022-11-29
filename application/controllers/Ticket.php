@@ -33,7 +33,6 @@ class Ticket extends CI_Controller
     {
         $data['title'] = 'Input Ticket';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-        // $data['semuaticket'] = $this->M_Ticket->List_ticket();
 
         $data['unix'] = time();
         $data['tanggal'] = date('d-m-Y', now());
@@ -62,20 +61,22 @@ class Ticket extends CI_Controller
             }
         }
     }
+
     function get_autocustomer()
     {
         if (isset($_GET['term'])) {
-            $result = $this->M_Ticket->search_customer($_GET['term']);
-            if (count($result) > 0) {
-                foreach ($result as $row)
+            $result2 = $this->M_Ticket->search_customer($_GET['term']);
+            if (count($result2) > 0) {
+                foreach ($result2 as $row)
                     $arr_result2[] = array(
-                        'nama'            => $row->nama,
+                        'label'            => $row->nama,
                         'nomorhp'         => $row->nomorhp,
                     );
                 echo json_encode($arr_result2);
             }
         }
     }
+
     function get_autosyarat()
     {
         $idlayanan = $this->input->post('id');

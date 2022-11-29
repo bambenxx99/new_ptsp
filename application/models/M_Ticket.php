@@ -35,14 +35,11 @@ class M_Ticket extends CI_Model
     }
 
 
-
     public function edit_ticket($kodeticket, $data)
     {
         $this->db->where('kode_ticket', $kodeticket);
         $this->db->update('ticket', $data);
     }
-
-
 
 
     public function updateHavesentmessage($data, $idticket)
@@ -68,8 +65,6 @@ class M_Ticket extends CI_Model
         $this->db->limit(5);
         return $this->db->get('ticket')->result();
     }
-
-
 
     public function search_syarat($idlayanan)
     {

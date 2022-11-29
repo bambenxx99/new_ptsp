@@ -30,7 +30,7 @@
                                         <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">
                                             Nama</div>
                                         <div class="col-md-6 col-xl-8 ">
-                                            <input name="nama_pemohon" type="text" id="nama_pemohon" class="form-control form-control-sm">
+                                            <input name="nama_pemohon" type="text" id="nama_pemohon" required class="form-control form-control-sm">
                                         </div>
                                     </div>
                                     <div class="row mb-2">
@@ -42,7 +42,7 @@
                                     <div class="row mb-2">
                                         <div class="col-md-4 col-xl-4 font-weight-bold col-form-label ">No. Handphone (Whatsapp)</div>
                                         <div class="col-md-6 col-xl-8 ">
-                                            <input name="no_hp" type="text" id="no_hp" class="form-control form-control-sm">
+                                            <input name="no_hp" type="text" id="no_hp" required class="form-control form-control-sm">
                                         </div>
                                     </div>
                                 </fieldset>
@@ -53,7 +53,7 @@
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Detail Tiket</h6>
                         </div>
-                        <fieldset id="ContentPlaceHolder1_fData">
+                        <fieldset id="ContentData">
                             <div class="card-body">
                                 <div class="row mb-2">
                                     <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Jenis Layanan</div>
@@ -71,7 +71,7 @@
                                 <div class="row mb-2">
                                     <div class="col-md-12 col-xl-3 font-weight-bold col-form-label ">Detail Ticket</div>
                                     <div class="col-md-6 col-xl-9 ">
-                                        <textarea name="detail_ticket" class=" form-control" id="detail_ticket" rows="3"></textarea>
+                                        <textarea name="detail_ticket" class=" form-control" required id="detail_ticket" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +108,6 @@
                                             <label for="lama_waktu" class=" col-form-label">Hari</label>
                                         </div>
                                     </fieldset>
-
                                 </div>
                             </div>
                         </div>
@@ -144,7 +143,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -167,12 +165,7 @@
             </div>
         </div>
     </form>
-    <!-- Page Heading -->
-
 </div>
-<!-- /.container-fluid -->
-<!-- End Fluid -->
-
 
 <?php
 $this->load->view('templates/footer');
@@ -197,16 +190,6 @@ $this->session->set_flashdata('message', null);
                 $('[name="lama_waktu"]').val(ui.item.waktu);
             }
         });
-
-        $('#nama_pemohon').autocomplete({
-            source: "<?php echo site_url('Ticket/get_autocustomer'); ?>",
-
-            select: function(event, ui) {
-                $('[name="nama_pemohon"]').val(ui.item.nama);
-                $('[name="no_hp"]').val(ui.item.nomorhp);
-            }
-        });
-
 
         $('#jenis_layanan').change(function() {
             var id = $(id_layanan).val();
@@ -242,72 +225,13 @@ $this->session->set_flashdata('message', null);
         });
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // $(function() {
-    // $('#tanggalMulai').datetimepicker({
-    // format: 'Y/M/D'
-
-    // });
-    // });
-    // $('#tanggalSelesai').datetimepicker({
-    // useCurrent: false,
-    // format: 'Y/M/D'
-    // });
-
-    // $('#tanggalMulai').on("dp.change", function(e) {
-    // $('#tanggalSelesai').data("DateTimePicker").minDate(e.date);
-    // CalcDiff()
-    // });
-
-    // $('#tanggalSelesai').on("dp.change", function(e) {
-    // $('#tanggalMulai').data("DateTimePicker").maxDate(e.date);
-    // CalcDiff()
-    // });
-
-    // function CalcDiff() {
-    // var a = $('#tanggalMulai').data("DateTimePicker").date();
-    // var b = $('#tanggalSelesai').data("DateTimePicker").date();
-    // var timeDiff = 0
-    // if (b) {
-    // timeDiff = (b - a) / 1000;
-    // }
-    // $('#JumlahHari').val(Math.floor(timeDiff / (86400) + 1))
-    // }
-    // $(document).ready(function() {
-    // $("#jenis_cuti").on('change', function() {
-    // if (this.value == "Tahunan") {
-    // $("#Tahunan").show(500);
-    // } else {
-    // $("#Tahunan").hide(500);
-    // }
-    // });
-    // });
+    $(document).ready(function() {
+        $('#nama_pemohon').autocomplete({
+            source: "<?php echo site_url('Ticket/get_autocustomer'); ?>",
+            select: function(event, ui) {
+                $('[name="nama_pemohon"]').val(ui.item.label);
+                $('[name="no_hp"]').val(ui.item.nomorhp);
+            }
+        });
+    });
 </script>
